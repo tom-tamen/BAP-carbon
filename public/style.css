@@ -6,11 +6,11 @@
 
 @font-face {
   font-family: "Koulen";
-  src: url(../fonts/Koulen-Regular.ttf);
+  src: url(../public/fonts/Koulen-Regular.ttf);
 }
 @font-face {
   font-family: "Metrophobic";
-  src: url(../fonts/Metrophobic-Regular.ttf);
+  src: url(../public/fonts/Metrophobic-Regular.ttf);
 }
 body {
   background: linear-gradient(135deg, #87EFC1 0%, #A0E3FF 100%);
