@@ -1,0 +1,380 @@
+[
+    {
+        "name": "Transports en commun (Metro, Bus, Tramway)",
+        "details": "1 km, 1 passager",
+        "category": "Transports",
+        "score": "35",
+        "ID": 1
+    },
+    {
+        "name": "Vélo",
+        "details": "1 km, 1 passager",
+        "category": "Transports",
+        "score": "0",
+        "ID": 2
+    },
+    {
+        "name": "TGV",
+        "details": "1 km, 1 passager",
+        "category": "Transports",
+        "score": "2",
+        "ID": 3
+    },
+    {
+        "name": "Avion (long-courrier)",
+        "details": "1 km, 1 passager",
+        "category": "Transports",
+        "score": "209",
+        "ID": 4
+    },
+    {
+        "name": "Voiture thermique",
+        "details": "1 km, 1 passager",
+        "category": "Transports",
+        "score": "150",
+        "ID": 5
+    },
+    {
+        "name": "Voiture électrique",
+        "details": "1 km, 1 passager",
+        "category": "Transports",
+        "score": "53",
+        "ID": 6
+    },
+    {
+        "name": "Voilier",
+        "details": "1 km, 1 passager",
+        "category": "Transports",
+        "score": "18",
+        "ID": 7
+    },
+    {
+        "name": "Paquebot",
+        "details": "1 km, 1 passager",
+        "category": "Transports",
+        "score": "322",
+        "ID": 8
+    },
+    {
+        "name": "Panneaux photovoltaïques",
+        "details": "1 KwH d'électricité",
+        "category": "Énergie",
+        "score": "55",
+        "ID": 9
+    },
+    {
+        "name": "Barrage hydroélectrique",
+        "details": "1 KwH d'électricité",
+        "category": "Énergie",
+        "score": "4",
+        "ID": 10
+    },
+    {
+        "name": "Centrale à charbon",
+        "details": "1 KwH d'électricité",
+        "category": "Énergie",
+        "score": "1038",
+        "ID": 11
+    },
+    {
+        "name": "Eolienne",
+        "details": "1 KwH d'électricité",
+        "category": "Énergie",
+        "score": "7",
+        "ID": 12
+    },
+    {
+        "name": "Centrale nucléaire",
+        "details": "1 KwH d'électricité",
+        "category": "Énergie",
+        "score": "6",
+        "ID": 13
+    },
+    {
+        "name": "Centrale au fioul",
+        "details": "1 KwH d'électricité",
+        "category": "Énergie",
+        "score": "704",
+        "ID": 14
+    },
+    {
+        "name": "Centrale à gaz",
+        "details": "1 KwH d'électricité",
+        "category": "Énergie",
+        "score": "406",
+        "ID": 15
+    },
+    {
+        "name": "Centrale géothermique",
+        "details": "1 KwH d'électricité",
+        "category": "Énergie",
+        "score": "45",
+        "ID": 16
+    },
+    {
+        "name": "Vêtements de seconde main",
+        "details": "",
+        "category": "Biens de consommation",
+        "score": "25",
+        "ID": 17
+    },
+    {
+        "name": "Vêtements neufs",
+        "details": "",
+        "category": "Biens de consommation",
+        "score": "90",
+        "ID": 18
+    },
+    {
+        "name": "Matelas mousse neuf",
+        "details": "Cycle de vie complet",
+        "category": "Biens de consommation",
+        "score": "275000",
+        "ID": 19
+    },
+    {
+        "name": "Matelas mousse d'occasion",
+        "details": "Cycle de vie complet",
+        "category": "Biens de consommation",
+        "score": "25000",
+        "ID": 20
+    },
+    {
+        "name": "Appareil ménager neuf",
+        "details": "Empreinte carbone par jour",
+        "category": "Biens de consommation",
+        "score": "238",
+        "ID": 21
+    },
+    {
+        "name": "Appareil ménager à faible consommation énergétique",
+        "details": "Empreinte carbone par jour",
+        "category": "Biens de consommation",
+        "score": "115",
+        "ID": 22
+    },
+    {
+        "name": "Chauffage au gaz ",
+        "details": " 2°C de +, consommation en une journée",
+        "category": "Maison / quotidien",
+        "score": "712",
+        "ID": 23
+    },
+    {
+        "name": "Chauffage au fioul",
+        "details": " 2°C de +, consommation en une journée",
+        "category": "Maison / quotidien",
+        "score": "1082",
+        "ID": 24
+    },
+    {
+        "name": "Chauffage électrique",
+        "details": " 2°C de +, consommation en une journée",
+        "category": "Maison / quotidien",
+        "score": "68",
+        "ID": 25
+    },
+    {
+        "name": "Ventilateur",
+        "details": "Utilisation pendant une journée",
+        "category": "Maison / quotidien",
+        "score": "8",
+        "ID": 26
+    },
+    {
+        "name": "Climatisation",
+        "details": "Utilisation pendant une journée",
+        "category": "Maison / quotidien",
+        "score": "115",
+        "ID": 27
+    },
+    {
+        "name": "Pompe à chaleur",
+        "details": "par kWh",
+        "category": "Maison / quotidien",
+        "score": "45",
+        "ID": 28
+    },
+    {
+        "name": "Ampoules",
+        "details": "10 ampoules équivalents 60W, pendant une journée",
+        "category": "Maison / quotidien",
+        "score": "71",
+        "ID": 29
+    },
+    {
+        "name": "Ampoules LED",
+        "details": "10 ampoules équivalents 60W, pendant une journée",
+        "category": "Maison / quotidien",
+        "score": "11",
+        "ID": 30
+    },
+    {
+        "name": "Chaudière au gaz",
+        "details": "par kWh",
+        "category": "Maison / quotidien",
+        "score": "230",
+        "ID": 31
+    },
+    {
+        "name": "Bain ",
+        "details": "",
+        "category": "Maison / quotidien",
+        "score": "20",
+        "ID": 32
+    },
+    {
+        "name": "Douche de 5 minutes",
+        "details": "Environ 15 litres / minutes",
+        "category": "Maison / quotidien",
+        "score": "10",
+        "ID": 33
+    },
+    {
+        "name": "Douche de  15 minutes",
+        "details": "Environ 15 litres / minutes",
+        "category": "Maison / quotidien",
+        "score": "30",
+        "ID": 34
+    },
+    {
+        "name": "1 épisode d'une série en streaming",
+        "details": "En France",
+        "category": "Loisirs",
+        "score": "10",
+        "ID": 35
+    },
+    {
+        "name": "1 heure de streaming musical ",
+        "details": "",
+        "category": "Loisirs",
+        "score": "55",
+        "ID": 36
+    },
+    {
+        "name": "Jeu vidéo en dématérialisé",
+        "details": "",
+        "category": "Loisirs",
+        "score": "27000",
+        "ID": 37
+    },
+    {
+        "name": "Jeu vidéo en physique",
+        "details": "",
+        "category": "Loisirs",
+        "score": "20000",
+        "ID": 38
+    },
+    {
+        "name": "Livre de poche",
+        "details": "Cycle de vie complet",
+        "category": "Loisirs",
+        "score": "2700",
+        "ID": 39
+    },
+    {
+        "name": "Liseuse électronique",
+        "details": "Cycle de vie complet",
+        "category": "Loisirs",
+        "score": "170000",
+        "ID": 40
+    },
+    {
+        "name": "Viande rouge",
+        "details": "1 kg",
+        "category": "Alimentation",
+        "score": "53000",
+        "ID": 41
+    },
+    {
+        "name": "Bouteille de vin",
+        "details": "75cl",
+        "category": "Alimentation",
+        "score": "1100",
+        "ID": 42
+    },
+    {
+        "name": "Eau en bouteille",
+        "details": "1 litre",
+        "category": "Alimentation",
+        "score": "393",
+        "ID": 43
+    },
+    {
+        "name": "Eau du robinet",
+        "details": "1 litre",
+        "category": "Alimentation",
+        "score": "0",
+        "ID": 44
+    },
+    {
+        "name": "Volaille",
+        "details": "1 kg",
+        "category": "Alimentation",
+        "score": "8000",
+        "ID": 45
+    },
+    {
+        "name": "Agneau",
+        "details": "1 kg",
+        "category": "Alimentation",
+        "score": "25000",
+        "ID": 46
+    },
+    {
+        "name": "Tri selectif et recyclage",
+        "details": "1 kg de plastique",
+        "category": "Habitudes éco-responsable",
+        "score": "-3000",
+        "ID": 47
+    },
+    {
+        "name": "Réduction du gaspillage alimentaire",
+        "details": "par personne, sur 1 an",
+        "category": "Habitudes éco-responsable",
+        "score": "-36000",
+        "ID": 48
+    },
+    {
+        "name": "Ordinateur portable",
+        "details": "Cycle de vie complet",
+        "category": "Numérique",
+        "score": "169",
+        "ID": 49
+    },
+    {
+        "name": "Smartphone",
+        "details": "Cycle de vie complet",
+        "category": "Numérique",
+        "score": "32",
+        "ID": 50
+    },
+    {
+        "name": "Mail",
+        "details": "Envoi d'un mail",
+        "category": "Numérique",
+        "score": "4",
+        "ID": 51
+    },
+    {
+        "name": "Transaction d'une NFT",
+        "details": "",
+        "category": "Numérique",
+        "score": "48000",
+        "ID": 52
+    },
+    {
+        "name": "Data Center",
+        "details": "Consommation d'une journée, environ 100 gigabits de données",
+        "category": "Numérique",
+        "score": "500",
+        "ID": 53
+    },
+    {
+        "name": "Visioconférence d'une heure",
+        "details": "Qualité HD (720p), 2 personnes",
+        "category": "Numérique",
+        "score": "4",
+        "ID": 54
+    }
+]
