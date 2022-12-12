@@ -38,7 +38,7 @@ for(let player=0; player<players; player++){
 
         cardId++
     }
-    document.querySelector('body').appendChild(cardBox)
+    document.querySelector('#cards').appendChild(cardBox)
 }
 
 
