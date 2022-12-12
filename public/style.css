@@ -6,15 +6,18 @@
 
 @font-face {
   font-family: "Koulen";
-  src: url(../public/fonts/Koulen-Regular.ttf);
+  src: url(./fonts/Koulen-Regular.ttf);
 }
 @font-face {
   font-family: "Metrophobic";
-  src: url(../public/fonts/Metrophobic-Regular.ttf);
+  src: url(./fonts/Metrophobic-Regular.ttf);
 }
 body {
   background: linear-gradient(135deg, #87EFC1 0%, #A0E3FF 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: "Metrophobic";
+  height: 100vh;
 }
 
 header {
@@ -219,6 +222,34 @@ footer {
 .sc-h1 {
   text-align: center;
   margin-top: 5vh;
+}
+
+.selection {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+}
+.selection .select-zone {
+  background-color: #0E2225;
+  width: 30%;
+  height: 40%;
+  border-radius: 25px;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.selection .select-zone p {
+  color: #fff;
 }
 
 .section-regles {

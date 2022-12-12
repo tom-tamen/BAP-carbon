@@ -9,3 +9,13 @@
         @content;
     }
 }
+
+@mixin flexdef($isNotColumn:null, $gap:null){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @if($isNotColumn){
+        flex-direction: row;
+    }
+}
