@@ -64,6 +64,17 @@
 
 .sc-h1 {text-align: center; margin-top: 5vh;}
 
+
+.sc-section{
+    @include mixins.flexdef;
+    width: 100%;
+}
+
+#cards{
+    @include mixins.flexdef;
+    width: 100%;
+}
+
 .selection{
     width: 100vw;
     height: 100vh;
@@ -122,5 +133,10 @@
     @include mixins.flexdef(true);
     p{
         font-size: 20px;
+        width: 10%;
     }
+    .box{
+        width: 90%;
+    }
+    width: 80%;
 }

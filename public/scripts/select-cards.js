@@ -1,30 +1,27 @@
-// const card = fetch("/card/2").then(function(response){
-//     response.json().then(resp => {console.log(resp)})
-// });
+const players = ["Marcus", "Dave", "Karl"]
+const NbPlayers = players.length
 
-
-const players = 2
-const cardPlayer = 5
+const cardPlayer = 4
 let cardId = 0
 
 let exportCard = []
 
-let pName = "{player name} :"
+//let pName = "{player name} :"
 
-for(let player=0; player<players; player++){
+for(let player=0; player<NbPlayers; player++){
     let cardBox = document.createElement('div')
     cardBox.classList.add('box')
 
     let allContent = document.createElement('div')
     let playerName = document.createElement('p')
     
-    playerName.innerText = pName
+    playerName.innerText = players[player] //pName
     allContent.classList.add('cpn')
 
     allContent.appendChild(playerName)
     allContent.appendChild(cardBox)
 
-    exportCard.push({"Player" : player, "cards" : []})
+    exportCard.push({"Player" : players[player], "cards" : []})
 
     for(let cardI=0; cardI<cardPlayer; cardI++){
         let card=document.createElement('div')
@@ -86,9 +83,10 @@ document.querySelectorAll('.card').forEach(card=>{
             exportCard[card.dataset.player].cards.forEach(obj=>{console.log(obj.cardObj)})
             // console.log("+++++++++++++++++++++++++++++++++++++++++++")
             // console.log("cid : "+OCID+" index : "+checkAll.indexOf(OCID)+" list : "+checkAll)
-            // checkAll.splice(checkAll.indexOf(OCID), 1)
+            checkAll.splice(checkAll.indexOf(OCID), 1)
             // console.log("+++++++++++++++++++++++++++++++++++++++++++")
             // console.log("cid : "+OCID+" index : "+checkAll.indexOf(OCID)+" list : "+checkAll)
+            console.log(exportCard, checkAll)
 
         }else{
             document.querySelector(".selection").classList.remove('hide')//affiche la searchbar
@@ -119,7 +117,6 @@ document.querySelector('.SC').addEventListener('click',()=>{
         });
     }
     document.querySelector('.selection').classList.add('hide')
-    console.log(exportCard.json())
 })
 
 // let obj = [
@@ -136,3 +133,4 @@ document.querySelector('.SC').addEventListener('click',()=>{
 //         {"CID" : 6, "cardObj" : "obj"}
 //     ]},
 // ]
+
