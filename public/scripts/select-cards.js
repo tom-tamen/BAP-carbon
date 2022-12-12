@@ -4,14 +4,25 @@
 
 
 const players = 2
-const cardPlayer = 6
+const cardPlayer = 5
 let cardId = 0
 
 let exportCard = []
 
+let pName = "{player name} :"
+
 for(let player=0; player<players; player++){
     let cardBox = document.createElement('div')
     cardBox.classList.add('box')
+
+    let allContent = document.createElement('div')
+    let playerName = document.createElement('p')
+    
+    playerName.innerText = pName
+    allContent.classList.add('cpn')
+
+    allContent.appendChild(playerName)
+    allContent.appendChild(cardBox)
 
     exportCard.push({"Player" : player, "cards" : []})
 
@@ -38,93 +49,8 @@ for(let player=0; player<players; player++){
 
         cardId++
     }
-    document.querySelector('#cards').appendChild(cardBox)
+    document.querySelector('#cards').appendChild(allContent)
 }
-
-
-// document.querySelectorAll('.card').forEach(card=>{
-    
-//     card.addEventListener('click', ()=>{
-
-//         if(card.dataset.already === "true"){ //check si la carte affiche un truc
-//             card.getElementsByTagName('img')[0].src = "img/cards/png/"
-//             card.getElementsByTagName('img')[0].classList.add('hide')
-//             card.dataset.already = "false"
-//             card.getElementsByTagName('div')[0].classList.remove('hide')
-            
-//         }else{            
-//             document.querySelector(".selection").classList.remove('hide')//affiche la searchbar
-    
-//             document.querySelector('.SC').addEventListener('click',()=>{
-//                 let value = document.querySelector('.searchBar').value
-//                 if(value>=1 && value<=54){
-//                     fetch("/card/"+value).then(function(response){
-//                         response.json().then(resp => {console.log(resp.name);
-//                             card.getElementsByTagName('img')[0].classList.remove('hide')
-//                             card.getElementsByTagName('img')[0].src ="img/cards/png/"+resp.ID+'.png'
-//                             card.dataset.already = "true"
-//                             card.getElementsByTagName('div')[0].classList.add('hide')
-//                         })
-//                     });
-//                 }
-//                 document.querySelector('.selection').classList.add('hide')
-//             })
-//         }
-//     })
-// })
-
-
-
-//===============================================================================================================
-// async function fetchCard(value) {
-//     const response = await fetch("/card/"+value);
-//     const card = await response.json();
-//     return card;
-// }
-
-// document.querySelectorAll('.card').forEach(card=>{
-    
-//     card.addEventListener('click', ()=>{
-
-//         if(card.dataset.already === "true"){ //check si la carte affiche un truc
-//             card.getElementsByTagName('img')[0].src = "img/cards/png/"
-//             card.getElementsByTagName('img')[0].classList.add('hide')
-//             card.dataset.already = "false"
-//             card.getElementsByTagName('div')[0].classList.remove('hide')
-            
-//         }else{            
-//             document.querySelector(".selection").classList.remove('hide')//affiche la searchbar
-    
-//             document.querySelector('.SC').addEventListener('click',()=>{
-//             // document.querySelector('.searchBar').addEventListener('keyup', ()=>{
-//                 let value = document.querySelector('.searchBar').value
-//                 if(value>=1 && value<=54){
-//                     fetchCard(value).then(fetchedCard => {
-//                         console.log(fetchedCard);
-//                         card.getElementsByTagName('img')[0].classList.remove('hide')
-//                         card.getElementsByTagName('img')[0].src ="img/cards/png/"+fetchedCard.ID+'.png'
-//                         card.dataset.already = "true"
-//                         card.getElementsByTagName('div')[0].classList.add('hide')
-//                     });
-//                 }
-//                 document.querySelector('.selection').classList.add('hide')
-//             // })
-//             })
-//         }
-//     })
-// })
-//===============================================================================================================
-
-// let i=1;
-// document.querySelectorAll('.card').forEach(card=>{
-//     fetch("/card/"+i).then(function(response){
-//         response.json().then(resp => {console.log(resp.name);
-//             card.getElementsByTagName('img')[0].classList.remove('hide')
-//             card.getElementsByTagName('img')[0].src = card.getElementsByTagName('img')[0].src+resp.ID+'.png'
-//         })
-//     });
-//     i++
-// })
 
 
 let checkAll = []
@@ -156,13 +82,13 @@ document.querySelectorAll('.card').forEach(card=>{
                     OCID=obj.cardObj.ID
                 }
             })
-            console.log("-------------------------------------------")
+            // console.log("-------------------------------------------")
             exportCard[card.dataset.player].cards.forEach(obj=>{console.log(obj.cardObj)})
-            console.log("+++++++++++++++++++++++++++++++++++++++++++")
-            console.log("cid : "+OCID+" index : "+checkAll.indexOf(OCID)+" list : "+checkAll)
-            checkAll.splice(checkAll.indexOf(OCID), 1)
-            console.log("+++++++++++++++++++++++++++++++++++++++++++")
-            console.log("cid : "+OCID+" index : "+checkAll.indexOf(OCID)+" list : "+checkAll)
+            // console.log("+++++++++++++++++++++++++++++++++++++++++++")
+            // console.log("cid : "+OCID+" index : "+checkAll.indexOf(OCID)+" list : "+checkAll)
+            // checkAll.splice(checkAll.indexOf(OCID), 1)
+            // console.log("+++++++++++++++++++++++++++++++++++++++++++")
+            // console.log("cid : "+OCID+" index : "+checkAll.indexOf(OCID)+" list : "+checkAll)
 
         }else{
             document.querySelector(".selection").classList.remove('hide')//affiche la searchbar
@@ -196,17 +122,17 @@ document.querySelector('.SC').addEventListener('click',()=>{
     console.log(exportCard.json())
 })
 
-let obj = [
-    {"Player" : 1, 
-    "cards" : [
-        {"CID" : 1, "cardObj" : "obj"},
-        {"CID" : 2, "cardObj" : "obj"},
-        {"CID" : 3, "cardObj" : "obj"}
-    ]},
-    {"Player" : 2, 
-    "cards" : [
-        {"CID" : 4, "cardObj" : "obj"},
-        {"CID" : 5, "cardObj" : "obj"},
-        {"CID" : 6, "cardObj" : "obj"}
-    ]},
-]
+// let obj = [
+//     {"Player" : 1, 
+//     "cards" : [
+//         {"CID" : 1, "cardObj" : "obj"},
+//         {"CID" : 2, "cardObj" : "obj"},
+//         {"CID" : 3, "cardObj" : "obj"}
+//     ]},
+//     {"Player" : 2, 
+//     "cards" : [
+//         {"CID" : 4, "cardObj" : "obj"},
+//         {"CID" : 5, "cardObj" : "obj"},
+//         {"CID" : 6, "cardObj" : "obj"}
+//     ]},
+// ]

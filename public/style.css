@@ -161,7 +161,7 @@ footer {
   height: 300px;
   display: flex;
   width: 80%;
-  overflow-x: scroll;
+  overflow-x: auto;
   justify-content: center;
   align-items: center;
   gap: 100px;
@@ -247,9 +247,49 @@ footer {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 20px;
 }
 .selection .select-zone p {
   color: #fff;
+}
+.selection .select-zone input {
+  width: 50%;
+  height: 40px;
+  outline: none;
+  border-radius: 25px;
+  padding: 10px;
+  text-align: center;
+  border: solid #87EFC1 3px;
+  background-color: rgba(160, 227, 255, 0.3);
+  color: #fff;
+  font-size: 18px;
+}
+.selection .select-zone input:focus {
+  border: solid #A0E3FF 3px;
+}
+.selection .select-zone button {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: solid #A0E3FF 3px;
+  background-color: transparent;
+  color: #A0E3FF;
+  cursor: pointer;
+}
+.selection .select-zone button:hover {
+  border: solid #87EFC1 3px;
+  color: #87EFC1;
+}
+
+.cpn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-direction: row;
+}
+.cpn p {
+  font-size: 20px;
 }
 
 .section-regles {
