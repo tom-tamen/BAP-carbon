@@ -584,6 +584,10 @@ footer {
   height: 100vh;
 }
 
+.header-select {
+  z-index: 22;
+}
+
 .bg-i {
   background-image: url(../../public/img/homepage/fond-à-pois.png);
 }
