@@ -318,6 +318,10 @@ footer {
   width: 90%;
 }
 
+.bouton-retour {
+  cursor: pointer;
+}
+
 .section-regles {
   background-color: #315357;
   margin: 40px;
