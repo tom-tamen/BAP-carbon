@@ -153,24 +153,20 @@ header {
   box-shadow: 0px 12.1935px 18.2903px rgba(0, 0, 0, 0.25);
   z-index: 3;
 }
-
-.logo-carbon {
+header .logo-carbon {
   width: auto;
   height: 70px;
   padding-left: 10px;
 }
-
-.fab {
+header .fab {
   color: #fff;
   font-size: 25px;
   margin-right: 20px;
 }
-
-.fab:hover {
+header .fab:hover {
   color: #87EFC1;
 }
-
-.btn-articles {
+header .btn-articles {
   background-color: #0E2225;
   border: none;
   border-left: 3px solid #fff;
@@ -181,16 +177,14 @@ header {
   font-family: "Koulen";
 }
 @media screen and (max-width: 700px) {
-  .btn-articles {
+  header .btn-articles {
     display: none;
   }
 }
-
-.btn-articles:hover {
+header .btn-articles:hover {
   color: #87EFC1;
 }
-
-a {
+header a {
   text-decoration: none;
 }
 
@@ -289,6 +283,9 @@ a {
   background: rgba(14, 34, 37, 0.6);
   border: 3px solid #FFFFFF;
   border-left: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 footer {
