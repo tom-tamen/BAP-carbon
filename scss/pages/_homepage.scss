@@ -72,6 +72,8 @@ header {
 .section-hp {
 
     display: flex;
+    z-index: 5;
+    position: relative;
 
     .rules {
         width: 353px;

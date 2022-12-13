@@ -196,6 +196,8 @@ a {
 
 .section-hp {
   display: flex;
+  z-index: 5;
+  position: relative;
 }
 .section-hp .rules {
   width: 353px;
@@ -360,6 +362,7 @@ footer {
 .sc-h1 {
   text-align: center;
   margin-top: 5vh;
+  font-family: "Koulen";
 }
 
 .sc-section {
