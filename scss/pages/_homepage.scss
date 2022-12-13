@@ -151,15 +151,40 @@ header {
     }
 
     .setup {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 59px 1fr;
+        width: 989px;
+        height: 475px;
 
-        .container_1 {
-            width: 494px;
-            height: 475px;
-            background: rgba(14, 34, 37, 0.6);
-            border: 5px solid #FFFFFF;
-            border-right: 0px;
+        .grid {
+            width: 100%;
+            height: 100%;
         }
 
+        .un {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2 ;
+            background: rgba(14, 34, 37, 0.6);
+            border: 3px solid #FFFFFF;
+            border-bottom: none;
+        }
+        
+        .deux {
+            grid-column: -3 / -2;
+            background: rgba(14, 34, 37, 0.6);
+            border: 3px solid #FFFFFF;
+            border-top: none;
+            border-right: none;
+        }
+
+        .trois {
+            grid-column: 2 / 3 ;
+            grid-row: -2 / -1 ;
+            background: rgba(14, 34, 37, 0.6);
+            border: 3px solid #FFFFFF;
+            border-left: none;
+        }
     }
 }
 
@@ -179,11 +204,6 @@ footer {
         position:relative;
         text-align: center;
     }
-}
-
-.reseaux {
-    display: flex;
-    gap: 8px;
 }
 
 .bg-pois {

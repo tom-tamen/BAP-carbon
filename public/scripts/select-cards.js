@@ -21,7 +21,7 @@ for(let player=0; player<NbPlayers; player++){
     allContent.appendChild(playerName)
     allContent.appendChild(cardBox)
 
-    exportCard.push({"Player" : players[player], "cards" : []})
+    exportCard.push({"playerID" : player ,"PlayerName" : players[player], "cards" : []})
 
     for(let cardI=0; cardI<cardPlayer; cardI++){
         let card=document.createElement('div')
@@ -134,3 +134,7 @@ document.querySelector('.SC').addEventListener('click',()=>{
 //     ]},
 // ]
 
+document.querySelector('.bouton-retour').addEventListener('click', ()=>{
+    localStorage.setItem('scoreFinal', JSON.stringify(exportCard))
+    window.location.href = "../classement.html";
+})
