@@ -3,6 +3,7 @@
 html {
     background-image: url(../../public/img/homepage/fond-à-pois.png);
     z-index: 2;
+    //inset: 0;
 }
 * {
     padding: 0;
@@ -25,7 +26,8 @@ header {
     justify-content: space-between;
     box-shadow: 0px 12.1935px 18.2903px rgba(0, 0, 0, 0.25);
     
-    z-index: 3;
+    z-index: 4;
+    position: relative;
     //height: 72px;
 
 

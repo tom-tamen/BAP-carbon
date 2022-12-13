@@ -5,10 +5,13 @@
     display: flex;
     width: 80%;
     overflow-x: auto;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 100px;
     margin-left: 10%;
+
+    position: relative;
+    z-index: 4;
 }
 
 .card{
@@ -62,24 +65,42 @@
     display: none;
 }
 
-.sc-h1 {text-align: center; margin-top: 5vh; font-family: 'Koulen'}
+.sc-h1 {
+    text-align: center; 
+    margin-top: 5vh; 
+    font-family: 'Koulen'; 
+    z-index: 5;
+    color: #fff;
+    font-size: 50px;
+}
 
 
 .sc-section{
     @include mixins.flexdef;
     width: 100%;
+
+    background-color: rgb(14, 34, 37, 0.6);
+    position: relative;
+    z-index: 5;
+    border: 5px solid #fff;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10vh;
 }
 
 #cards{
     @include mixins.flexdef;
     width: 100%;
+
+    z-index: 4;
+    border: 5px solid #fff;
 }
 
 .selection{
     width: 100vw;
     height: 100vh;
     position: fixed;
-    z-index: 1;
+    z-index: 5;
     background-color: rgba($color: #000000, $alpha: .4);
     top:0;
     left: 0;
@@ -131,12 +152,25 @@
 
 .cpn{
     @include mixins.flexdef(true);
-    p{
-        font-size: 20px;
-        width: 10%;
+    .box-player{
+        @include mixins.flexdef;
+        img{
+            border-radius: 100%;
+            width: 100px;
+            height: 100px;
+        }
+        p{
+            font-size: 20px;
+            color: #fff;
+            font-family: "Koulen";
+        }
     }
     .box{
         width: 90%;
     }
     width: 80%;
+}
+
+.bouton-retour{
+    cursor: pointer;
 }

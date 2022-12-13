@@ -39,13 +39,16 @@
 }
 
 #boutons-regles-mobile {
-    display: none;
     background-color: #0E2225;
     color: #fff;
     border-radius: 20px;
     border: none;
     padding: 0.5rem;
     margin-left: 10%;
+
+}
+.div-boutons-regles-mobile {
+    display: none;
 
     @include mixins.breakpoint(850px) {
         display: block;
@@ -81,6 +84,10 @@
     color: #fff;
     text-transform: uppercase;
     font-weight: bold;
+
+    @include mixins.breakpoint(850px) {
+        background-color: #0E2225;
+    }
 }
 
 .btn-rules:hover {
@@ -91,6 +98,16 @@
 
 .btn-acc {
     margin-top: 30px;
+
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(30, 225, 139);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.btn-acc a {
+    color: #fff;
 }
 
 .active {
