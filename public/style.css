@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -12,12 +13,18 @@
   font-family: "Metrophobic";
   src: url(./fonts/Metrophobic-Regular.ttf);
 }
+html {
+  background-image: url(../../public/img/homepage/fond-à-pois.png);
+  z-index: 2;
+}
+
 body {
   background: linear-gradient(135deg, #87EFC1 0%, #A0E3FF 100%);
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Metrophobic";
-  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
 }
 
 header {
@@ -25,6 +32,7 @@ header {
   display: flex;
   justify-content: space-between;
   box-shadow: 0px 12.1935px 18.2903px rgba(0, 0, 0, 0.25);
+  z-index: 3;
 }
 
 .logo-carbon {
@@ -157,6 +165,13 @@ footer {
   gap: 8px;
 }
 
+.bg-pois {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background-image: url("img/homepage/fond-à-pois.png");
+}
+
 .box {
   height: 300px;
   display: flex;
@@ -253,10 +268,12 @@ footer {
 }
 
 .section-regles {
-  background-color: #315357;
-  margin: 40px;
+  background: rgba(14, 34, 37, 0.7);
+  margin: 70px;
   color: #fff;
-  border-radius: 10px;
+  border: 5px solid #fff;
+  position: relative;
+  z-index: 4;
 }
 
 .h1-regles {
@@ -270,7 +287,7 @@ footer {
   margin-top: 40px;
   padding: 30px 0px 50px 0px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 850px) {
   .div-regles {
     flex-direction: column;
     margin-top: 0px;
@@ -282,7 +299,7 @@ footer {
   flex-direction: column;
   gap: 20px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 850px) {
   .boutons-regles {
     display: none;
   }
@@ -297,7 +314,7 @@ footer {
   padding: 0.5rem;
   margin-left: 10%;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 850px) {
   #boutons-regles-mobile {
     display: block;
   }
@@ -307,7 +324,7 @@ footer {
   width: 50%;
   display: none;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 850px) {
   .section-regles-droite {
     width: 80%;
     margin-left: 10%;
@@ -321,37 +338,44 @@ footer {
 }
 
 .h2-regles {
-  color: #87EFC1;
+  color: #fff;
 }
 
 .btn-rules {
   padding: 0.5rem;
-  border-radius: 20px;
+  border-radius: 5px;
   border: none;
-  background-color: #0E2225;
+  background-color: rgb(30, 225, 139);
   color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .btn-rules:hover {
   cursor: pointer;
-  background-color: #87EFC1;
-  color: #0E2225;
 }
 
-.bouton-retour {
-  color: #fff;
-  background-color: #0E2225;
-  border-radius: 10px;
-  padding: 5px;
+.btn-acc {
+  margin-top: 30px;
 }
 
 .active {
   display: block;
 }
 
-.btn-active {
-  background-color: #87EFC1;
-  color: #0E2225;
+.titre-bg {
+  background: linear-gradient(135deg, #1EE18B 0%, #4cc9ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 36vw;
+  font-family: "Koulen";
+  position: absolute;
+  line-height: 0.6;
+  z-index: 1;
+  text-align: center;
+  left: 0;
+  right: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,10 +1,13 @@
 @use "mixins";
 
 .section-regles {
-    background-color: #315357;
-    margin: 40px;
+    background: rgba(14, 34, 37, 0.7);
+    margin: 70px;
     color: #fff;
-    border-radius: 10px;
+    border: 5px solid #fff;
+
+    position: relative;
+    z-index: 4;
 }
 
 .h1-regles {
@@ -18,7 +21,7 @@
     margin-top: 40px;
     padding: 30px 0px 50px 0px;
 
-    @include mixins.breakpoint(700px) {
+    @include mixins.breakpoint(850px) {
         flex-direction: column;
         margin-top: 0px;
     }
@@ -29,7 +32,7 @@
     flex-direction: column;
     gap: 20px;
 
-    @include mixins.breakpoint(700px) {
+    @include mixins.breakpoint(850px) {
         display: none;
     }
 }
@@ -43,7 +46,7 @@
     padding: 0.5rem;
     margin-left: 10%;
 
-    @include mixins.breakpoint(700px) {
+    @include mixins.breakpoint(850px) {
         display: block;
     }
 }
@@ -52,7 +55,7 @@
     width: 50%;
     display: none;
 
-    @include mixins.breakpoint(700px) {
+    @include mixins.breakpoint(850px) {
         width: 80%;
         margin-left: 10%;
         margin-top: 5%;
@@ -65,35 +68,45 @@
 }
 
 .h2-regles {
-    color: #87EFC1;
+    color: #fff;
 }
 
 .btn-rules {
     padding: 0.5rem;
-    border-radius: 20px;
+    border-radius: 5px;
     border: none;
-    background-color: #0E2225;
+    background-color: rgb(30, 225, 139);
     color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .btn-rules:hover {
     cursor: pointer;
-    background-color: #87EFC1;
-    color: #0E2225;
+    // background-color: #87EFC1;
+    // color: #0E2225;
 }
 
-.bouton-retour {
-    color: #fff;
-    background-color: #0E2225;
-    border-radius: 10px;
-    padding: 5px;
+.btn-acc {
+    margin-top: 30px;
 }
 
 .active {
     display: block;
 }
 
-.btn-active {
-    background-color: #87EFC1;
-    color: #0E2225;
+
+.titre-bg {
+    background: linear-gradient(135deg, #1EE18B 0%, #4cc9ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 36vw;
+    font-family: "Koulen";
+    position: absolute;
+    line-height: 0.6;
+    z-index: 1;
+    text-align: center;
+    left: 0;
+    right: 0;
 }
