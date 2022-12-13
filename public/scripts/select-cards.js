@@ -21,7 +21,7 @@ for(let player=0; player<NbPlayers; player++){
     allContent.appendChild(playerName)
     allContent.appendChild(cardBox)
 
-    exportCard.push({"playerID" : player ,"PlayerName" : players[player], "cards" : []})
+    exportCard.push({"playerID" : player ,"PlayerName" : players[player], "picture": "https://xsgames.co/randomusers/avatar.php?g=pixel","cards" : []})
 
     for(let cardI=0; cardI<cardPlayer; cardI++){
         let card=document.createElement('div')
@@ -65,7 +65,7 @@ document.querySelectorAll('.card').forEach(card=>{
     card.addEventListener('click', ()=>{
         currentCard = card
         if(card.dataset.already === "true"){ //check si la carte affiche un truc
-            card.getElementsByTagName('img')[0].src = "img/cards/png/"
+            card.getElementsByTagName('img')[0].src = "img/cards/png/nothing.png"
             card.getElementsByTagName('img')[0].classList.add('hide')
             card.dataset.already = "false"
             card.getElementsByTagName('div')[0].classList.remove('hide')
@@ -118,21 +118,6 @@ document.querySelector('.SC').addEventListener('click',()=>{
     }
     document.querySelector('.selection').classList.add('hide')
 })
-
-// let obj = [
-//     {"Player" : 1, 
-//     "cards" : [
-//         {"CID" : 1, "cardObj" : "obj"},
-//         {"CID" : 2, "cardObj" : "obj"},
-//         {"CID" : 3, "cardObj" : "obj"}
-//     ]},
-//     {"Player" : 2, 
-//     "cards" : [
-//         {"CID" : 4, "cardObj" : "obj"},
-//         {"CID" : 5, "cardObj" : "obj"},
-//         {"CID" : 6, "cardObj" : "obj"}
-//     ]},
-// ]
 
 document.querySelector('.bouton-retour').addEventListener('click', ()=>{
     localStorage.setItem('scoreFinal', JSON.stringify(exportCard))

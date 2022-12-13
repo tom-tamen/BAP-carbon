@@ -26,6 +26,11 @@ scoreFinal.forEach(player =>{
     place++
     PlayerBox.appendChild(number)
 
+    let picture = document.createElement('img')
+    picture.src = player.picture
+    picture.alr = "image de profile"
+    PlayerBox.appendChild(picture)
+
     let name = document.createElement('p')
     name.innerText = player.PlayerName
     PlayerBox.appendChild(name)

@@ -3,3 +3,12 @@
 .bg-i {
     background-image: url(../../public/img/homepage/fond-à-pois.png);
 }
+
+.player{
+    img{
+        border-radius: 100%;
+        width: 100px;
+        height: 100px;
+    }
+    border: solid 2px red;
+}
