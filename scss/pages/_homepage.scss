@@ -1,5 +1,9 @@
 @use "mixins";
 
+html {
+    background-image: url(../../public/img/homepage/fond-à-pois.png);
+    z-index: 2;
+}
 * {
     padding: 0;
     margin: 0;
@@ -11,31 +15,31 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "Metrophobic";
-    
+    position: relative;
+    overflow-x: hidden;
+}
 
-    header {
-        background-color: #0E2225;
-        display: flex;
-        height: 72px;
-        justify-content: space-between;
-        box-shadow: 0px 12.1935px 18.2903px rgba(0, 0, 0, 0.25);
-    }
+header {
+    background-color: #0E2225;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 12.1935px 18.2903px rgba(0, 0, 0, 0.25);
+    
+    z-index: 3;
+    //height: 72px;
+}
 
     .logo-carbon {
         width: auto;
-        height: 64px;
+        height: 70px;
         padding-left: 10px;
     }
 
-    div {
-
-        display: flex;
-        align-items: center;
 
         .fab {
             color: #fff;
             font-size: 25px;
-            margin-right: 32px;
+            margin-right: 20px;
         }
     
         .fab:hover {
@@ -45,11 +49,12 @@ body {
         .btn-articles {
             background-color: #0E2225;
             border: none;
-            border-left: 3px solid white;
+            border-left: 3px solid #fff;
             font-size: 30px;
-            padding: 18px 15px;
+            padding: 12px 15px;
             color: white;
             letter-spacing: 0.15em;
+            font-family: 'Koulen';
         
             @include mixins.breakpoint(700px) {
                 display: none;
@@ -63,12 +68,12 @@ body {
         a {
             text-decoration: none;
         }   
-    }
-}
 
-section {
+.section-hp {
 
     display: flex;
+    z-index: 5;
+    position: relative;
 
     .rules {
         width: 353px;
@@ -81,9 +86,10 @@ section {
             flex-direction: column;
             padding: 24px;
 
-            h1 {
+            .h1-homepage {
                 font-size: 32px;
                 padding-bottom: 32px;
+                font-family: 'Koulen';
             }
 
             .rules-text {
@@ -143,15 +149,40 @@ section {
     }
 
     .setup {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 59px 1fr;
+        width: 989px;
+        height: 475px;
 
-        .container_1 {
-            width: 494px;
-            height: 475px;
-            background: rgba(14, 34, 37, 0.6);
-            border: 5px solid #FFFFFF;
-            border-right: 0px;
+        .grid {
+            width: 100%;
+            height: 100%;
         }
 
+        .un {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2 ;
+            background: rgba(14, 34, 37, 0.6);
+            border: 3px solid #FFFFFF;
+            border-bottom: none;
+        }
+        
+        .deux {
+            grid-column: -3 / -2;
+            background: rgba(14, 34, 37, 0.6);
+            border: 3px solid #FFFFFF;
+            border-top: none;
+            border-right: none;
+        }
+
+        .trois {
+            grid-column: 2 / 3 ;
+            grid-row: -2 / -1 ;
+            background: rgba(14, 34, 37, 0.6);
+            border: 3px solid #FFFFFF;
+            border-left: none;
+        }
     }
 }
 
@@ -173,7 +204,9 @@ footer {
     }
 }
 
-.reseaux {
-    display: flex;
-    gap: 8px;
+.bg-pois {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    background-image: url('img/homepage/fond-à-pois.png');
 }
