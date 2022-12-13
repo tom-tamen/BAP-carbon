@@ -53,7 +53,6 @@
 }
 
 #boutons-regles-mobile {
-  display: none;
   background-color: #0E2225;
   color: #fff;
   border-radius: 20px;
@@ -61,8 +60,12 @@
   padding: 0.5rem;
   margin-left: 10%;
 }
+
+.div-boutons-regles-mobile {
+  display: none;
+}
 @media screen and (max-width: 850px) {
-  #boutons-regles-mobile {
+  .div-boutons-regles-mobile {
     display: block;
   }
 }
@@ -98,6 +101,11 @@
   text-transform: uppercase;
   font-weight: bold;
 }
+@media screen and (max-width: 850px) {
+  .btn-rules {
+    background-color: #0E2225;
+  }
+}
 
 .btn-rules:hover {
   cursor: pointer;
@@ -105,6 +113,16 @@
 
 .btn-acc {
   margin-top: 30px;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(30, 225, 139);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.btn-acc a {
+  color: #fff;
 }
 
 .active {
@@ -151,7 +169,8 @@ header {
   display: flex;
   justify-content: space-between;
   box-shadow: 0px 12.1935px 18.2903px rgba(0, 0, 0, 0.25);
-  z-index: 3;
+  z-index: 4;
+  position: relative;
 }
 
 .logo-carbon {
@@ -302,10 +321,12 @@ footer {
   display: flex;
   width: 80%;
   overflow-x: auto;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 100px;
   margin-left: 10%;
+  position: relative;
+  z-index: 4;
 }
 
 .card {
@@ -363,6 +384,9 @@ footer {
   text-align: center;
   margin-top: 5vh;
   font-family: "Koulen";
+  z-index: 5;
+  color: #fff;
+  font-size: 50px;
 }
 
 .sc-section {
@@ -371,6 +395,13 @@ footer {
   justify-content: center;
   flex-direction: column;
   width: 100%;
+  background-color: rgba(14, 34, 37, 0.6);
+  position: relative;
+  z-index: 5;
+  border: 5px solid #fff;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 10vh;
 }
 
 #cards {
@@ -379,13 +410,15 @@ footer {
   justify-content: center;
   flex-direction: column;
   width: 100%;
+  z-index: 4;
+  border: 5px solid #fff;
 }
 
 .selection {
   width: 100vw;
   height: 100vh;
   position: fixed;
-  z-index: 1;
+  z-index: 5;
   background-color: rgba(0, 0, 0, 0.4);
   top: 0;
   left: 0;
