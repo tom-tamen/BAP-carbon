@@ -14,11 +14,21 @@ for(let player=0; player<NbPlayers; player++){
 
     let allContent = document.createElement('div')
     let playerName = document.createElement('p')
-    
     playerName.innerText = players[player] //pName
+
+    let picture = document.createElement('img')
+    picture.src = "https://xsgames.co/randomusers/avatar.php?g=pixel"
+    picture.alt = "image de profile"
+    
+
+    let playerInfos = document.createElement('div')
+    playerInfos.classList.add('box-player')
+    playerInfos.appendChild(picture)
+    playerInfos.appendChild(playerName)
+
     allContent.classList.add('cpn')
 
-    allContent.appendChild(playerName)
+    allContent.appendChild(playerInfos)
     allContent.appendChild(cardBox)
 
     exportCard.push({"playerID" : player ,"PlayerName" : players[player], "picture": "https://xsgames.co/randomusers/avatar.php?g=pixel","cards" : []})

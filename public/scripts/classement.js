@@ -28,7 +28,7 @@ scoreFinal.forEach(player =>{
 
     let picture = document.createElement('img')
     picture.src = player.picture
-    picture.alr = "image de profile"
+    picture.alt = "image de profile"
     PlayerBox.appendChild(picture)
 
     let name = document.createElement('p')
