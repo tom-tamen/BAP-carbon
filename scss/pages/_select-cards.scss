@@ -1,38 +1,30 @@
 @use 'mixins';
 
-.box{
-    height: 300px;
-    display: flex;
-    width: 80%;
-    overflow-x: auto;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 50px;
-    margin-left: 10%;
-
-    position: relative;
-    z-index: 4;
-}
-
 .card{
-    height: 105px;
-    width: 75px;
-    min-width: 75px;
+    width: 10vw;
+    aspect-ratio: 5/7;
     display: block;
     border: solid 2px #0E2225;
-    border-radius: 22px;
+    border-radius: 8px;
     position: relative;
     cursor: pointer;
+    background-color: #fff;
+    &:hover{
+        transform: translateY(-10px);
+        transition: transform 0.1s;
+    }
+
+    &.cardOff{
+        filter: grayscale(100%);
+        background-color: gray;
+        opacity: 60%;
+    }
 }
 
-.card:hover{
-    transform: translateY(-10px);
-    transition: transform 0.1s;
-}
 
 .plus{
     display: block;
-    width: 30px;
+    width: 30%;
     height: 3px;
     position: absolute;
     top: 50%;
@@ -67,7 +59,6 @@
 
 .sc-h1 {
     text-align: center; 
-    margin-top: 5vh; 
     font-family: 'Koulen'; 
     z-index: 5;
     color: #fff;
@@ -77,15 +68,12 @@
 
 .sc-section{
     @include mixins.flexdef;
-    width: 100%;
-
+    width: 80%;
+    height: 70vh;
     background-color: rgb(14, 34, 37, 0.6);
     position: relative;
     z-index: 5;
     border: 5px solid #fff;
-    width: 90%;
-    margin-left: 5%;
-    margin-top: 10vh;
 }
 
 #cards{
@@ -96,62 +84,99 @@
     border: 5px solid #fff;
 }
 
-.selection{
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    z-index: 5;
-    background-color: rgba($color: #000000, $alpha: .4);
-    top:0;
-    left: 0;
+.content-all{
+    @include mixins.flexdef(true);
     .select-zone{
-        background-color: #0E2225;
+        font-family: "Koulen";
         width: 30%;
         height: 40%;
         border-radius: 25px;
         padding: 20px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         @include mixins.flexdef;
         gap: 20px;
         p{
             color: #fff;
         }
-        input{
-            width: 50%;
-            height: 40px;
-            outline: none;
-            border-radius: 25px;
-            padding: 10px;
-            text-align: center;
-            border: solid #87EFC1 3px;
-            background-color: rgba($color: #A0E3FF, $alpha: .3);
-            color: #fff;
-            font-size: 18px;
-            &:focus{
-                border: solid #A0E3FF 3px;
+        .add-card{
+            @include mixins.flexdef(true);
+            width: 100%;
+            gap: 6px;
+            .searchBar{
+                width: 80%;
+                height: 40px;
+                outline: none;
+                padding: 10px;
+                text-align: center;
+                border: solid #fff 4px;
+                background-color: rgba($color: #A0E3FF, $alpha: .3);
+                color: #fff;
+                font-size: 18px;
+                &::placeholder{
+                    color: #fff;
+                    text-align: left;
+                    opacity: 0.8;
+                }
+                &:focus{
+                    border: solid #4CC9FF 4px;
+                }
+            }
+            button{
+                width: 34px;
+                height: 34px;
+                border-radius: 5px;
+                background-color: #1EE18B;
+                color: #A0E3FF;
+                cursor: pointer;
+                border: none;
+                color: #fff;
+                font-size: 35px;
+                font-family: "Koulen";
+                position: relative;
+                &:hover{
+                    background-color: #4CC9FF;
+                }
+                &.disabled{
+                    filter: grayscale(90%);
+                    cursor:default;
+                    &:hover{
+                        filter: grayscale(90%);
+                    }
+                }
             }
         }
-        button{
-            width: 50px;
-            height: 50px;
-            border-radius: 100%;
-            border: solid #A0E3FF 3px;
-            background-color: transparent;
-            color: #A0E3FF;
+        .bouton-retour{
             cursor: pointer;
+            width: 70%;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+            color: #fff;
+            background-color: #1EE18B;
+            position: relative;
+            border-radius: 5px;
             &:hover{
-                border: solid #87EFC1 3px;
-                color: #87EFC1;
+                background-color: #4CC9FF;
             }
+        }
+        .align-both{
+            width: 34px;
+            height: 34px;
+        }
+        span{
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     }
 }
 
 .cpn{
-    @include mixins.flexdef(true);
+    display: none;
+    align-items: center;
+    justify-content: center;
     .box-player{
         @include mixins.flexdef;
         img{
@@ -166,11 +191,49 @@
         }
     }
     .box{
-        width: 90%;
+        height: 30vh;
+        display: flex;
+        width: 80%;
+        overflow-x: auto;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 3vh;
+        margin-left: 10%;
+        position: relative;
+        .cache{
+            width: 100%;
+            height: 100%;
+            z-index: 21;
+            position: absolute;
+            display: none;
+            &.show-cache{
+                display: block;
+            }
+        }
     }
     width: 80%;
 }
 
-.bouton-retour{
-    cursor: pointer;
+
+.content-visible{
+    display: flex;
+}
+
+.select-cards-main{
+    height: 100vh;
+    width: 100vw;
+    @include mixins.flexdef;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+
+.select-cards-body{
+    height: 100vh;
+}
+
+
+.header-select{
+    z-index: 22;
 }

@@ -173,24 +173,20 @@ header {
   z-index: 4;
   position: relative;
 }
-
-.logo-carbon {
+header .logo-carbon {
   width: auto;
   height: 70px;
   padding-left: 10px;
 }
-
-.fab {
+header .fab {
   color: #fff;
   font-size: 25px;
   margin-right: 20px;
 }
-
-.fab:hover {
+header .fab:hover {
   color: #87EFC1;
 }
-
-.btn-articles {
+header .btn-articles {
   background-color: #0E2225;
   border: none;
   border-left: 3px solid #fff;
@@ -201,16 +197,14 @@ header {
   font-family: "Koulen";
 }
 @media screen and (max-width: 700px) {
-  .btn-articles {
+  header .btn-articles {
     display: none;
   }
 }
-
-.btn-articles:hover {
+header .btn-articles:hover {
   color: #87EFC1;
 }
-
-a {
+header a {
   text-decoration: none;
 }
 
@@ -309,6 +303,9 @@ a {
   background: rgba(14, 34, 37, 0.6);
   border: 3px solid #FFFFFF;
   border-left: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 footer {
@@ -337,38 +334,29 @@ footer {
   background-image: url("img/homepage/fond-à-pois.png");
 }
 
-.box {
-  height: 300px;
-  display: flex;
-  width: 80%;
-  overflow-x: auto;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 50px;
-  margin-left: 10%;
-  position: relative;
-  z-index: 4;
-}
-
 .card {
-  height: 105px;
-  width: 75px;
-  min-width: 75px;
+  width: 10vw;
+  aspect-ratio: 5/7;
   display: block;
   border: solid 2px #0E2225;
-  border-radius: 22px;
+  border-radius: 8px;
   position: relative;
   cursor: pointer;
+  background-color: #fff;
 }
-
 .card:hover {
   transform: translateY(-10px);
   transition: transform 0.1s;
 }
+.card.cardOff {
+  filter: grayscale(100%);
+  background-color: gray;
+  opacity: 60%;
+}
 
 .plus {
   display: block;
-  width: 30px;
+  width: 30%;
   height: 3px;
   position: absolute;
   top: 50%;
@@ -403,7 +391,6 @@ footer {
 
 .sc-h1 {
   text-align: center;
-  margin-top: 5vh;
   font-family: "Koulen";
   z-index: 5;
   color: #fff;
@@ -415,14 +402,12 @@ footer {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
+  width: 80%;
+  height: 70vh;
   background-color: rgba(14, 34, 37, 0.6);
   position: relative;
   z-index: 5;
   border: 5px solid #fff;
-  width: 90%;
-  margin-left: 5%;
-  margin-top: 10vh;
 }
 
 #cards {
@@ -435,69 +420,110 @@ footer {
   border: 5px solid #fff;
 }
 
-.selection {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  z-index: 5;
-  background-color: rgba(0, 0, 0, 0.4);
-  top: 0;
-  left: 0;
+.content-all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-direction: row;
 }
-.selection .select-zone {
-  background-color: #0E2225;
+.content-all .select-zone {
+  font-family: "Koulen";
   width: 30%;
   height: 40%;
   border-radius: 25px;
   padding: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 20px;
 }
-.selection .select-zone p {
+.content-all .select-zone p {
   color: #fff;
 }
-.selection .select-zone input {
-  width: 50%;
-  height: 40px;
-  outline: none;
-  border-radius: 25px;
-  padding: 10px;
-  text-align: center;
-  border: solid #87EFC1 3px;
-  background-color: rgba(160, 227, 255, 0.3);
-  color: #fff;
-  font-size: 18px;
-}
-.selection .select-zone input:focus {
-  border: solid #A0E3FF 3px;
-}
-.selection .select-zone button {
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  border: solid #A0E3FF 3px;
-  background-color: transparent;
-  color: #A0E3FF;
-  cursor: pointer;
-}
-.selection .select-zone button:hover {
-  border: solid #87EFC1 3px;
-  color: #87EFC1;
-}
-
-.cpn {
+.content-all .select-zone .add-card {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   flex-direction: row;
+  width: 100%;
+  gap: 6px;
+}
+.content-all .select-zone .add-card .searchBar {
+  width: 80%;
+  height: 40px;
+  outline: none;
+  padding: 10px;
+  text-align: center;
+  border: solid #fff 4px;
+  background-color: rgba(160, 227, 255, 0.3);
+  color: #fff;
+  font-size: 18px;
+}
+.content-all .select-zone .add-card .searchBar::placeholder {
+  color: #fff;
+  text-align: left;
+  opacity: 0.8;
+}
+.content-all .select-zone .add-card .searchBar:focus {
+  border: solid #4CC9FF 4px;
+}
+.content-all .select-zone .add-card button {
+  width: 34px;
+  height: 34px;
+  border-radius: 5px;
+  background-color: #1EE18B;
+  color: #A0E3FF;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  font-size: 35px;
+  font-family: "Koulen";
+  position: relative;
+}
+.content-all .select-zone .add-card button:hover {
+  background-color: #4CC9FF;
+}
+.content-all .select-zone .add-card button.disabled {
+  filter: grayscale(90%);
+  cursor: default;
+}
+.content-all .select-zone .add-card button.disabled:hover {
+  filter: grayscale(90%);
+}
+.content-all .select-zone .bouton-retour {
+  cursor: pointer;
+  width: 70%;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  background-color: #1EE18B;
+  position: relative;
+  border-radius: 5px;
+}
+.content-all .select-zone .bouton-retour:hover {
+  background-color: #4CC9FF;
+}
+.content-all .select-zone .align-both {
+  width: 34px;
+  height: 34px;
+}
+.content-all .select-zone span {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cpn {
+  display: none;
+  align-items: center;
+  justify-content: center;
   width: 80%;
 }
 .cpn .box-player {
@@ -517,11 +543,50 @@ footer {
   font-family: "Koulen";
 }
 .cpn .box {
-  width: 90%;
+  height: 30vh;
+  display: flex;
+  width: 80%;
+  overflow-x: auto;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3vh;
+  margin-left: 10%;
+  position: relative;
+}
+.cpn .box .cache {
+  width: 100%;
+  height: 100%;
+  z-index: 21;
+  position: absolute;
+  display: none;
+}
+.cpn .box .cache.show-cache {
+  display: block;
 }
 
-.bouton-retour {
-  cursor: pointer;
+.content-visible {
+  display: flex;
+}
+
+.select-cards-main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.select-cards-body {
+  height: 100vh;
+}
+
+.header-select {
+  z-index: 22;
 }
 
 .bg-i {
