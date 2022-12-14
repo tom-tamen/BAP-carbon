@@ -10,5 +10,11 @@
         width: 100px;
         height: 100px;
     }
-    border: solid 2px red;
+    border: solid 2px #0E2225;
+    background-color: rgba(14, 34, 37, 0.7);
+}
+
+.podium {
+    position: relative;
+    z-index: 5;
 }
