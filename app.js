@@ -35,6 +35,10 @@ app.get('/event/all', (req, res) => {
     res.send(events)
 })
 
+app.get('/event/:ID', (req, res) => {
+    res.send(events[req.params.ID-1])
+})
+
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })

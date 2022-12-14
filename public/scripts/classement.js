@@ -22,22 +22,27 @@ scoreFinal.forEach(player =>{
     PlayerBox.classList.add('player')
     
     let number = document.createElement('p')
+    number.classList.add('position')
     number.innerText = place
     place++
     PlayerBox.appendChild(number)
 
+    let playerSubBox = document.createElement('div')
+    playerSubBox.classList.add('info-player')
+    PlayerBox.appendChild(playerSubBox)
+
     let picture = document.createElement('img')
     picture.src = player.picture
     picture.alt = "image de profile"
-    PlayerBox.appendChild(picture)
+    playerSubBox.appendChild(picture)
 
     let name = document.createElement('p')
     name.innerText = player.PlayerName
-    PlayerBox.appendChild(name)
+    playerSubBox.appendChild(name)
 
     let scorePlayer = document.createElement('p')
     scorePlayer.innerText = "Score : "+player.score
-    PlayerBox.appendChild(scorePlayer)
+    playerSubBox.appendChild(scorePlayer)
 
     document.querySelector(".podium").appendChild(PlayerBox)
 })

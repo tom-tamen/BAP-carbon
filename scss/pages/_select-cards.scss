@@ -60,7 +60,7 @@
 .sc-h1 {
     text-align: center; 
     font-family: 'Koulen'; 
-    z-index: 5;
+    z-index: 9;
     color: #fff;
     font-size: 50px;
 }
@@ -72,8 +72,12 @@
     height: 70vh;
     background-color: rgb(14, 34, 37, 0.6);
     position: relative;
-    z-index: 5;
+    z-index: 9;
     border: 5px solid #fff;
+}
+.sc-section p {
+    color: #fff;
+    margin-bottom: 20px;
 }
 
 #cards{
@@ -224,9 +228,9 @@
     width: 100vw;
     @include mixins.flexdef;
     position: fixed;
-    top: 0;
+    top: 5vh;
     left: 0;
-    z-index: 20;
+    z-index: 8;
 }
 
 .select-cards-body{
