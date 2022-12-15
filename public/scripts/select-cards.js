@@ -169,7 +169,7 @@ document.querySelector(".chevron-previous").addEventListener("click",()=>{
         }
     })
     cpn[current].classList.remove('content-visible')
-    if(current-1<=0){
+    if(current-1<=-1){
         cpn[cpn.length-1].classList.add('content-visible')
     }else{
         cpn[current-1].classList.add('content-visible')
