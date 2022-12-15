@@ -7,12 +7,17 @@
 }
 
 body {
-    background: linear-gradient(135deg, #87EFC1 0%, #A0E3FF 100%);
+    min-height: 100vh;
+    background: url("img/homepage/fond-à-pois.png"), linear-gradient(135deg, #87EFC1 0%, #A0E3FF 100%);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "Metrophobic";
     position: relative;
     overflow-x: hidden;
+}
+
+:root {
+    // background-image: url("img/homepage/fond-à-pois.png");
 }
 
 header {
@@ -205,12 +210,12 @@ footer {
     }
 }
 
-.bg-pois {
-    position: absolute;
-    top: 10vh;
-    left: 0;
-    right: 0;
-    bottom: -10vh;
-    z-index: 3;
-    background-image: url('img/homepage/fond-à-pois.png');
-}
+// .bg-pois {
+//     position: absolute;
+//     top: 10vh;
+//     left: 0;
+//     right: 0;
+//     bottom: -10vh;
+//     z-index: 3;
+//     background-image: url('img/homepage/fond-à-pois.png');
+// }
