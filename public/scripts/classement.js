@@ -11,6 +11,9 @@ scoreFinal.forEach(player => {
 });
 scoreFinal.sort((a, b) => (a.score > b.score) ? 1 : -1)
 
+
+
+
 //--------------------------------------------------------------
 
 let place=1
@@ -29,14 +32,6 @@ scoreFinal.forEach((player,counter) =>{
     playerSubBox.classList.add('info-player')
     PlayerBox.appendChild(playerSubBox)
 
-    if(counter<=2){
-        let picture = document.createElement('img')
-        picture.src = player.picture
-        picture.alt = "image de profile"
-        playerSubBox.appendChild(picture)
-        console.log(counter)
-    }
-
     let name = document.createElement('p')
     name.innerText = player.PlayerName
     playerSubBox.appendChild(name)
@@ -45,5 +40,14 @@ scoreFinal.forEach((player,counter) =>{
     scorePlayer.innerText = "Score : "+player.score
     playerSubBox.appendChild(scorePlayer)
 
-    document.querySelector(".podium").appendChild(PlayerBox)
+    if(counter<=2){
+        let picture = document.createElement('img')
+        picture.src = player.picture
+        picture.alt = "image de profile"
+        playerSubBox.appendChild(picture)
+        document.querySelector(".podium").appendChild(PlayerBox)
+        PlayerBox.classList.add('player-'+counter)
+    }else{
+        document.querySelector(".autres-joueurs").appendChild(PlayerBox)
+    }
 })
