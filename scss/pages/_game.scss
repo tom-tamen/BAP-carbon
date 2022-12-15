@@ -16,6 +16,7 @@
         border-bottom: 4px solid #fff;
         font-size: 50px;
         padding: 8px 12px 5px 12px;
+        cursor: pointer;
 
         div {
             background-color: rgba(14, 34, 37, 0.7);
@@ -32,6 +33,12 @@
             font-size: 30px;
         }
     }
+    .div-tour:hover {
+        div {
+            opacity: 1;
+        }
+    }
+
     .titre-event {
         grid-column: 2 / 3;
         grid-row: 1 / 2;
@@ -41,11 +48,13 @@
         font-size: 50px;
         text-align: center;
         background-color: rgba(14, 34, 37, 0.7);
+        cursor: pointer;
 
         p {
             text-shadow: 0px 4.88px 4.88px rgba(0, 0, 0, 0.25);
         }
     }
+
     .event {
         grid-column: 1 / 2;
         grid-row: 2 / 3;

@@ -1,10 +1,5 @@
 @use "mixins";
 
-html {
-    background-image: url(../../public/img/homepage/fond-à-pois.png);
-    z-index: 2;
-    //inset: 0;
-}
 * {
     padding: 0;
     margin: 0;
@@ -28,7 +23,6 @@ header {
     
     z-index: 4;
     position: relative;
-    //height: 72px;
 
 
     .logo-carbon {
@@ -213,7 +207,10 @@ footer {
 
 .bg-pois {
     position: absolute;
-    inset: 0;
+    top: 10vh;
+    left: 0;
+    right: 0;
+    bottom: -10vh;
     z-index: 3;
     background-image: url('img/homepage/fond-à-pois.png');
 }

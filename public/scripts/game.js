@@ -39,7 +39,7 @@ document.querySelector('.next').addEventListener('click', ()=>{
         if(hasEvent(frequency)){
             fetchEvent(Math.floor(Math.random() * 18) + 1).then(fetchedEvent => {
                 console.log(fetchedEvent)
-                eventName.innerText = fetchedEvent.name
+                eventName.innerText = fetchedEvent.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
                 eventDesc.innerText = fetchedEvent.effect
             })
         }else{

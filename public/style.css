@@ -145,11 +145,6 @@
   right: 0;
 }
 
-html {
-  background-image: url(../../public/img/homepage/fond-à-pois.png);
-  z-index: 2;
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -329,7 +324,10 @@ footer {
 
 .bg-pois {
   position: absolute;
-  inset: 0;
+  top: 10vh;
+  left: 0;
+  right: 0;
+  bottom: -10vh;
   z-index: 3;
   background-image: url("img/homepage/fond-à-pois.png");
 }
@@ -423,6 +421,24 @@ footer {
   width: 60%;
   z-index: 4;
   border: 5px solid #fff;
+  position: relative;
+}
+#cards .chevron {
+  position: absolute;
+  width: 40px;
+  height: auto;
+  z-index: 21;
+  cursor: pointer;
+}
+#cards .chevron:nth-child(1) {
+  top: 5%;
+}
+#cards .chevron:nth-child(2) {
+  bottom: 5%;
+  transform: rotate(180deg);
+}
+#cards .chevron:hover {
+  opacity: 50%;
 }
 
 .content-all {
@@ -792,6 +808,7 @@ footer {
   border-bottom: 4px solid #fff;
   font-size: 50px;
   padding: 8px 12px 5px 12px;
+  cursor: pointer;
 }
 .div-game .div-tour div {
   background-color: rgba(14, 34, 37, 0.7);
@@ -805,6 +822,9 @@ footer {
 .div-game .div-tour span {
   font-size: 30px;
 }
+.div-game .div-tour:hover div {
+  opacity: 1;
+}
 .div-game .titre-event {
   grid-column: 2/3;
   grid-row: 1/2;
@@ -814,6 +834,7 @@ footer {
   font-size: 50px;
   text-align: center;
   background-color: rgba(14, 34, 37, 0.7);
+  cursor: pointer;
 }
 .div-game .titre-event p {
   text-shadow: 0px 4.88px 4.88px rgba(0, 0, 0, 0.25);
