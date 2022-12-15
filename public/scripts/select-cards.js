@@ -1,4 +1,4 @@
-const players = ["Marcus", "Dave", "Karl"]
+const players = ["Marcus", "Dave", "Karl", "Artem"]
 const NbPlayers = players.length
 
 const cardPlayer = 4
