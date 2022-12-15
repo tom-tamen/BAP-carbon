@@ -671,6 +671,7 @@ footer {
   grid-row: 3/4;
   border-right: 4px solid #fff;
   border-top: 4px solid #fff;
+  background-color: brown;
 }
 .podium .player-2 img {
   width: 80px;
@@ -745,6 +746,7 @@ footer {
 }
 .podium .titres-page-classement h1 {
   font-size: 50px;
+  text-shadow: 0px 4.88px 4.88px rgba(0, 0, 0, 0.25);
 }
 @media screen and (max-width: 900px) {
   .podium .titres-page-classement h1 {
@@ -754,6 +756,7 @@ footer {
 .podium .titres-page-classement h2 {
   line-height: 2px;
   font-size: 35px;
+  text-shadow: 0px 4.88px 4.88px rgba(0, 0, 0, 0.25);
 }
 @media screen and (max-width: 900px) {
   .podium .titres-page-classement h2 {
@@ -791,24 +794,97 @@ footer {
   font-family: "Koulen";
 }
 
+.div-game {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 90px 380px;
+  position: relative;
+  z-index: 5;
+  width: 80%;
+  margin: 10vh 10% 10vh 10%;
+  color: #fff;
+  font-family: "Koulen";
+}
+.div-game .div-tour {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  border-bottom: 4px solid #fff;
+  font-size: 50px;
+  padding: 8px 12px 5px 12px;
+}
+.div-game .div-tour div {
+  background-color: rgba(14, 34, 37, 0.7);
+  height: 78px;
+  opacity: 0.7;
+}
+.div-game .div-tour .tour {
+  text-align: center;
+  text-shadow: 0px 4.88px 4.88px rgba(0, 0, 0, 0.25);
+}
+.div-game .div-tour span {
+  font-size: 30px;
+}
+.div-game .titre-event {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  border-top: 4px solid #fff;
+  border-left: 4px solid #fff;
+  border-right: 4px solid #fff;
+  font-size: 50px;
+  text-align: center;
+  background-color: rgba(14, 34, 37, 0.7);
+}
+.div-game .titre-event p {
+  text-shadow: 0px 4.88px 4.88px rgba(0, 0, 0, 0.25);
+}
+.div-game .event {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  border-left: 4px solid #fff;
+  border-bottom: 4px solid #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10%;
+  background-color: rgba(14, 34, 37, 0.7);
+}
+.div-game .event .eventDesc {
+  font-family: "Metrophobic";
+  text-align: justify;
+}
+.div-game .event h2 {
+  font-size: 30px;
+}
+.div-game .visuel-cartes {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  border-right: 4px solid #fff;
+  border-bottom: 4px solid #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-top: 20px;
+  background-color: rgba(14, 34, 37, 0.7);
+}
+
 .next {
   cursor: pointer;
-  width: 70%;
+  width: 50%;
   height: 40px;
   padding: 10px;
-  text-align: center;
   font-size: 20px;
   color: #fff;
   background-color: #1EE18B;
   position: relative;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4.88px 4.88px rgba(0, 0, 0, 0.25);
 }
 .next:hover {
   background-color: #4CC9FF;
-}
-
-.tour span {
-  color: red;
 }
 
 /*# sourceMappingURL=style.css.map */
