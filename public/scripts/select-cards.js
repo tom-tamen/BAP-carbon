@@ -148,3 +148,29 @@ document.querySelector('.bouton-retour').addEventListener('click', ()=>{
     localStorage.setItem('scoreFinal', JSON.stringify(exportCard))
     window.location.href = "../classement.html";
 })
+
+
+
+function getCurrent(list){
+    list.forEach((player, index)=>{
+        if(player.classList.contains("content-visible")){
+            return index
+        }
+    })
+}
+
+
+document.querySelector(".chevron-previous").addEventListener("click",()=>{
+    let current = getCurrent(cpn)
+    cpn[current].classList.remove('content-visible')
+    cpn[current-1].classList.add('content-visible')
+
+})
+document.querySelector(".chevron-next").addEventListener("click",()=>{
+    let cpn = document.querySelectorAll(".cpn");
+    console.log(getCurrent(cpn))
+    // let current = getCurrent(cpn)
+    // console.log(current, cpn[current], cpn[current+1])
+    cpn[current].classList.remove('content-visible')
+    cpn[current+1].classList.add('content-visible')
+})

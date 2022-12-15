@@ -86,6 +86,25 @@
 
     z-index: 4;
     border: 5px solid #fff;
+    position: relative;
+    .chevron{
+        position: absolute;
+        width: 40px;
+        height: auto;
+        z-index: 21;
+        cursor: pointer;
+        &:nth-child(1){
+            top: 5%;
+        }
+        &:nth-child(2){
+            bottom: 5%;
+            transform: rotate(180deg);
+        }
+        &:hover{
+            opacity: 50%;
+        }
+        
+    }
 }
 
 .content-all{
