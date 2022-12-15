@@ -1,4 +1,4 @@
-const players = ["Marcus", "Dave", "Karl"]
+const players = ["Marcus", "Dave", "Karl","Mike","Luke","Kenny","Thomas"]
 const NbPlayers = players.length
 
 const cardPlayer = 4
@@ -11,6 +11,11 @@ let exportCard = []
 for(let player=0; player<NbPlayers; player++){
     let cardBox = document.createElement('div')
     cardBox.classList.add('box')
+
+    let cache = document.createElement('div')
+    cache.classList.add("cache")
+
+    cardBox.appendChild(cache)
 
     let allContent = document.createElement('div')
     let playerName = document.createElement('p')
@@ -27,6 +32,9 @@ for(let player=0; player<NbPlayers; player++){
     playerInfos.appendChild(playerName)
 
     allContent.classList.add('cpn')
+    if(player === 0){
+        allContent.classList.add('content-visible')
+    }
 
     allContent.appendChild(playerInfos)
     allContent.appendChild(cardBox)
@@ -99,7 +107,10 @@ document.querySelectorAll('.card').forEach(card=>{
             console.log(exportCard, checkAll)
 
         }else{
-            document.querySelector(".selection").classList.remove('hide')//affiche la searchbar
+            document.querySelector(".SC").classList.remove('disabled')
+            document.querySelector(".SC").disabled = false
+            document.querySelectorAll('.card').forEach(card=>card.classList.add("cardOff"))
+            document.querySelectorAll('.cache').forEach(box=>box.classList.add("show-cache"))
         }
     })
 })
@@ -107,6 +118,7 @@ document.querySelectorAll('.card').forEach(card=>{
 
 document.querySelector('.SC').addEventListener('click',()=>{
     let value = document.querySelector('.searchBar').value
+    document.querySelector('.searchBar').value = ""
     if(value>=1 && value<=54){
         fetchCard(value).then(fetchedCard => {
             console.log(fetchedCard);
@@ -126,10 +138,39 @@ document.querySelector('.SC').addEventListener('click',()=>{
             console.log(exportCard, checkAll)
         });
     }
-    document.querySelector('.selection').classList.add('hide')
+    document.querySelector(".SC").classList.add('disabled')
+    document.querySelector(".SC").disabled = true
+    document.querySelectorAll('.card').forEach(card=>card.classList.remove("cardOff"))
+    document.querySelectorAll('.cache').forEach(box=>box.classList.remove("show-cache"))
 })
 
 document.querySelector('.bouton-retour').addEventListener('click', ()=>{
     localStorage.setItem('scoreFinal', JSON.stringify(exportCard))
     window.location.href = "../classement.html";
+})
+
+
+
+function getCurrent(list){
+    list.forEach((player, index)=>{
+        if(player.classList.contains("content-visible")){
+            return index
+        }
+    })
+}
+
+
+document.querySelector(".chevron-previous").addEventListener("click",()=>{
+    let current = getCurrent(cpn)
+    cpn[current].classList.remove('content-visible')
+    cpn[current-1].classList.add('content-visible')
+
+})
+document.querySelector(".chevron-next").addEventListener("click",()=>{
+    let cpn = document.querySelectorAll(".cpn");
+    console.log(getCurrent(cpn))
+    // let current = getCurrent(cpn)
+    // console.log(current, cpn[current], cpn[current+1])
+    cpn[current].classList.remove('content-visible')
+    cpn[current+1].classList.add('content-visible')
 })

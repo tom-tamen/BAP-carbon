@@ -1,10 +1,5 @@
 @use "mixins";
 
-html {
-    background-image: url(../../public/img/homepage/fond-à-pois.png);
-    z-index: 2;
-    //inset: 0;
-}
 * {
     padding: 0;
     margin: 0;
@@ -12,12 +7,17 @@ html {
 }
 
 body {
-    background: linear-gradient(135deg, #87EFC1 0%, #A0E3FF 100%);
+    min-height: 100vh;
+    background: url("img/homepage/fond-à-pois.png"), linear-gradient(135deg, #87EFC1 0%, #A0E3FF 100%);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "Metrophobic";
     position: relative;
     overflow-x: hidden;
+}
+
+:root {
+    // background-image: url("img/homepage/fond-à-pois.png");
 }
 
 header {
@@ -28,7 +28,6 @@ header {
     
     z-index: 4;
     position: relative;
-    //height: 72px;
 
 
     .logo-carbon {
@@ -211,9 +210,12 @@ footer {
     }
 }
 
-.bg-pois {
-    position: absolute;
-    inset: 0;
-    z-index: 3;
-    background-image: url('img/homepage/fond-à-pois.png');
-}
+// .bg-pois {
+//     position: absolute;
+//     top: 10vh;
+//     left: 0;
+//     right: 0;
+//     bottom: -10vh;
+//     z-index: 3;
+//     background-image: url('img/homepage/fond-à-pois.png');
+// }

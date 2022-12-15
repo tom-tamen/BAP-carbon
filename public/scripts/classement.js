@@ -7,37 +7,47 @@ scoreFinal.forEach(player => {
     player.cards.forEach(card =>{
         total+= parseInt(card.cardObj.score)
     })
-    // scores.push({"ID" : player["playerID"], "Name" : player["PlayerName"], "score" : total})
     player["score"]= total
-    // console.log(player)
 });
 scoreFinal.sort((a, b) => (a.score > b.score) ? 1 : -1)
+
+
+
 
 //--------------------------------------------------------------
 
 let place=1
 
-scoreFinal.forEach(player =>{
+scoreFinal.forEach((player,counter) =>{
     let PlayerBox = document.createElement('div')
     PlayerBox.classList.add('player')
     
     let number = document.createElement('p')
+    number.classList.add('position')
     number.innerText = place
     place++
     PlayerBox.appendChild(number)
 
-    let picture = document.createElement('img')
-    picture.src = player.picture
-    picture.alt = "image de profile"
-    PlayerBox.appendChild(picture)
+    let playerSubBox = document.createElement('div')
+    playerSubBox.classList.add('info-player')
+    PlayerBox.appendChild(playerSubBox)
 
     let name = document.createElement('p')
     name.innerText = player.PlayerName
-    PlayerBox.appendChild(name)
+    playerSubBox.appendChild(name)
 
     let scorePlayer = document.createElement('p')
     scorePlayer.innerText = "Score : "+player.score
-    PlayerBox.appendChild(scorePlayer)
+    playerSubBox.appendChild(scorePlayer)
 
-    document.querySelector(".podium").appendChild(PlayerBox)
+    if(counter<=2){
+        let picture = document.createElement('img')
+        picture.src = player.picture
+        picture.alt = "image de profile"
+        playerSubBox.appendChild(picture)
+        document.querySelector(".podium").appendChild(PlayerBox)
+        PlayerBox.classList.add('player-'+counter)
+    }else{
+        document.querySelector(".autres-joueurs").appendChild(PlayerBox)
+    }
 })
