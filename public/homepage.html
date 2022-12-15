@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil --- CARBON</title>
 
-    <script src="https://kit.fontawesome.com/42f94b7d2b.js" crossorigin="anonymous"></script>
+    
     <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
 
     <link rel="stylesheet" href="style.css">
@@ -57,45 +57,47 @@
             </div>
             <div class="grid deux">
                 <div class="edit-player">
-                    <img src="" alt="">
+                    <img id="" src="" alt="">
                     <h3>Creer ton personnage</h3>
-                    <input type="text">
-                    <button>></button>
+                    <input id="name" type="text" name="name">
+                    <input type="submit" value="z" onclick="test()">
                 </div>
-                <div class="player-list">
+                <h2>joueurs</h2>
+                <div id="player-list">
                     <img src="" alt="">
-                    <p></p>
+                    <span src="player-list-name"></span>
                 </div>
             </div>
             <div class="grid trois">
                 <h3>nombre de tours</h3>
-                <div class="stages">
-                    <button>10</button>
-                    <button>15</button>
-                    <button>25</button>
-                    <button>30</button>
-                    <button>35</button>
-                    <button><input type="text"></button>
+                <div class="laps">
+                    <input class="lap" type="button" name="10" value="10">
+                    <input class="lap" type="button" name="15" value="15">
+                    <input class="lap" type="button" name="25" value="25">
+                    <input class="lap" type="button" name="30" value="30">
+                    <input class="lap" type="button" name="35" value="35" >
+                    <input class="lap" type="text" id="client-value">
                 </div>
                 <h3>Frequences des evenements</h3>
                 <p>par rapports au nombre de tours</p>
                 <div class="event">
-                    <button>25%</button>
-                    <button>50%</button>
-                    <button>75%</button>
-                    <button>100%</button>
+                    <button class="frequency" name="25%" value="0,25">25%</button>
+                    <button class="frequency" name="50%" value="0.50">50%</button>
+                    <button class="frequency" name="75%" value="0.75">75%</button>
+                    <button class="frequency" name="100%" value="1">100%</button>
                 </div>
-                <button>lancer la partie</button>
+                <input type="submit" value="Lancer la partie" />
             </div>
         </div>
         
     </section>
 
     <footer>
-        
+    
         <p class="copyright">Copyright © 2022 IIM Digital School - Axe Coding & Digital Innovation</p>
 
     </footer>
-    
+    <script src="https://kit.fontawesome.com/42f94b7d2b.js" crossorigin="anonymous"></script>
+    <script src="scripts/game-info.js"></script>
 </body>
 </html>
