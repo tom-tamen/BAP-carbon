@@ -42,6 +42,9 @@ document.querySelectorAll('.next').forEach(btn=>{
             })
     
             if(hasEvent(frequency)){
+                if(GameEvent.classList.contains('hide')){
+                    changeState(GameEvent, GameTour)
+                }
                 fetchEvent(Math.floor(Math.random() * 18) + 1).then(fetchedEvent => {
                     // console.log(fetchedEvent)
                     eventName.innerText = fetchedEvent.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
@@ -64,11 +67,14 @@ let GameEvent = document.querySelector('.div-game-event')
 let btnEvent=document.querySelector('.btn-event')
 let btnTour=document.querySelector('.btn-tour')
 
+function changeState(toRemove, toAdd){
+    toRemove.classList.remove('hide')
+    toAdd.classList.add('hide')
+}
+
 btnTour.addEventListener('click', ()=>{
-    GameTour.classList.remove('hide')
-    GameEvent.classList.add('hide')
+    changeState(GameTour, GameEvent)
 })
 btnEvent.addEventListener('click', ()=>{
-    GameTour.classList.add('hide')
-    GameEvent.classList.remove('hide')
+    changeState(GameEvent, GameTour)
 })

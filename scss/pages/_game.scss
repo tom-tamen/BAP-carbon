@@ -78,10 +78,9 @@
             font-family: 'Metrophobic';
             text-align: justify;
         }
-        .tourP{
-            &:nth-child(1){
-                font-size: 30px;
-            }
+
+        .tourP:nth-child(1){
+            font-size: 30px;
         }
 
         h2 {
