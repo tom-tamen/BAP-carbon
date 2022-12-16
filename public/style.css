@@ -342,6 +342,10 @@ footer {
   background-color: gray;
   opacity: 60%;
 }
+.card.hide-card {
+  background-color: transparent !important;
+  border: none !important;
+}
 
 .plus {
   display: block;
@@ -371,7 +375,6 @@ footer {
 .imgcard {
   width: 100%;
   height: 100%;
-  border-radius: 20px;
 }
 
 .hide {

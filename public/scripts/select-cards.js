@@ -87,6 +87,7 @@ document.querySelectorAll('.card').forEach(card=>{
             card.getElementsByTagName('img')[0].classList.add('hide')
             card.dataset.already = "false"
             card.getElementsByTagName('div')[0].classList.remove('hide')
+            card.classList.remove('hide-card')
 
             let OCID;
             exportCard[card.dataset.player].cards.forEach(obj=>{console.log(obj.cardObj)})
@@ -130,6 +131,7 @@ document.querySelector('.SC').addEventListener('click',()=>{
                 currentCard.getElementsByTagName('img')[0].src ="img/cards/png/"+fetchedCard.ID+'.png'
                 currentCard.dataset.already = "true"
                 currentCard.getElementsByTagName('div')[0].classList.add('hide')
+                currentCard.classList.add('hide-card')
     
                 exportCard[currentCard.dataset.player].cards.push({"CID": currentCard.dataset.id,"cardObj": fetchedCard})
             }else{
