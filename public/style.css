@@ -601,6 +601,10 @@ footer {
   z-index: 22;
 }
 
+.hide {
+  display: none !important;
+}
+
 .bg-i {
   background-image: url(../../public/img/homepage/fond-à-pois.png);
 }
@@ -847,9 +851,12 @@ footer {
   padding-left: 10%;
   background-color: rgba(14, 34, 37, 0.7);
 }
-.div-game .event .eventDesc {
+.div-game .event .eventDesc, .div-game .event .tourP {
   font-family: "Metrophobic";
   text-align: justify;
+}
+.div-game .event .tourP:nth-child(1) {
+  font-size: 30px;
 }
 .div-game .event h2 {
   font-size: 30px;

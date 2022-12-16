@@ -74,9 +74,14 @@
         padding-left: 10%;
         background-color: rgba(14, 34, 37, 0.7);
 
-        .eventDesc {
+        .eventDesc, .tourP {
             font-family: 'Metrophobic';
             text-align: justify;
+        }
+        .tourP{
+            &:nth-child(1){
+                font-size: 30px;
+            }
         }
 
         h2 {
