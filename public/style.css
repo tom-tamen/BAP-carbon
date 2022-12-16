@@ -289,53 +289,65 @@ header a {
   width: 100%;
   height: 100%;
 }
-.section-hp .setup .un {
+.section-hp .setup .one {
   grid-column: 1/2;
   grid-row: 1/2;
   background: rgba(14, 34, 37, 0.6);
   border: 3px solid #FFFFFF;
   border-bottom: none;
 }
-.section-hp .setup .un h3 {
+.section-hp .setup .one h3 {
   font-family: "Koulen";
   font-weight: 400;
   font-size: 45px;
   text-align: center;
   color: white;
 }
-.section-hp .setup .deux {
+.section-hp .setup .two {
   grid-column: -3/-2;
   background: rgba(14, 34, 37, 0.6);
   border: 3px solid #FFFFFF;
   border-top: none;
   border-right: none;
 }
-.section-hp .setup .deux .player-display {
+.section-hp .setup .two .player-display {
   height: 380px;
   border: solid 2px rgba(0, 0, 0, 0.201);
   border-radius: 5%;
   margin: 16px;
   padding-top: 16px;
 }
-.section-hp .setup .deux .player-display .edit-player {
+.section-hp .setup .two .player-display #player-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 32px;
+  margin-left: 80px;
+  gap: 32px;
+  width: 80%;
+}
+.section-hp .setup .two .player-display #player-list #view-player img {
+  width: 44px;
+  height: 45px;
+}
+.section-hp .setup .two .player-display .edit-player {
   display: flex;
 }
-.section-hp .setup .deux .player-display .edit-player img {
+.section-hp .setup .two .player-display .edit-player img {
   width: 84px;
   height: 85px;
   margin-left: 24px;
 }
-.section-hp .setup .deux .player-display .edit-player .player-inputs {
+.section-hp .setup .two .player-display .edit-player .player-inputs {
   margin-left: 24px;
 }
-.section-hp .setup .deux .player-display .edit-player .player-inputs h3 {
+.section-hp .setup .two .player-display .edit-player .player-inputs h3 {
   font-family: "Koulen";
   font-weight: 400;
   font-size: 24px;
   color: white;
   text-align: center;
 }
-.section-hp .setup .deux .player-display .edit-player .player-inputs #name {
+.section-hp .setup .two .player-display .edit-player .player-inputs #name {
   width: 180px;
   background: rgba(255, 255, 255, 0.1);
   border: 3px solid #FFFFFF;
@@ -345,14 +357,14 @@ header a {
   font-size: 12px;
   color: white;
 }
-.section-hp .setup .deux .player-display .edit-player .player-inputs #name::placeholder {
+.section-hp .setup .two .player-display .edit-player .player-inputs #name::placeholder {
   font-family: "Koulen";
   font-weight: 400;
   font-size: 16px;
   color: rgba(255, 255, 255, 0.75);
   padding-left: 4px;
 }
-.section-hp .setup .deux .player-display .edit-player .player-inputs #submit-player {
+.section-hp .setup .two .player-display .edit-player .player-inputs #submit-player {
   width: 32px;
   height: 32px;
   background: #1EE18B;
@@ -361,15 +373,76 @@ header a {
   color: white;
   border: none;
 }
-.section-hp .setup .trois {
+.section-hp .setup .three {
   grid-column: 2/3;
   grid-row: -2/-1;
   background: rgba(14, 34, 37, 0.6);
   border: 3px solid #FFFFFF;
   border-left: none;
+  padding-top: 24px;
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+.section-hp .setup .three h3 {
+  margin-top: 40px;
+  font-family: "Koulen";
+  font-weight: 400;
+  line-height: 20px;
+  font-size: 24px;
+  color: white;
+}
+.section-hp .setup .three p {
+  font-family: "Koulen";
+  font-weight: 100;
+  font-size: 16px;
+  color: white;
+}
+.section-hp .setup .three .laps {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  margin-top: 16px;
+}
+.section-hp .setup .three .laps .lap-btn {
+  width: 42px;
+  height: 37px;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border: 3px solid #FFFFFF;
+  border-radius: 10px;
+  gap: 100px;
+}
+.section-hp .setup .three .event {
+  display: flex;
+  margin-bottom: 32px;
+  margin-top: 16px;
+  gap: 32px;
+}
+.section-hp .setup .three .event .frequency {
+  width: 42px;
+  height: 37px;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border: 3px solid #FFFFFF;
+  border-radius: 10px;
+  font-family: "Koulen";
+  font-weight: 400;
+  font-size: 16px;
+  color: white;
+}
+.section-hp .setup .three #submit-setup {
+  width: 232px;
+  height: 48px;
+  background: #1EE18B;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-family: "Koulen";
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
 }
 
 footer {

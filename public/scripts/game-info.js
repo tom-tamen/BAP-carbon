@@ -13,9 +13,16 @@ function test(){
         }
         for (let i = 0; i < players.length; i++) {
             let p = document.createElement("p")
+            let playerDiv = document.createElement('div')
+            let img = document.createElement("img")
+            playerDiv.setAttribute("id", "view-player");
+            img.src = "img/homepage/Avatar.png";
+            playerDiv.appendChild(img)
+            playerDiv.appendChild(p)
             p.innerHTML=players[i]
-            playerList.appendChild(p)
+            playerList.appendChild(playerDiv)
         }
+        
     } else {
         console.log("2 many players")
     }
