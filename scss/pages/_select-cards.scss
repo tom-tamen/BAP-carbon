@@ -19,6 +19,11 @@
         background-color: gray;
         opacity: 60%;
     }
+
+    &.hide-card{
+        background-color: transparent !important;
+        border: none !important;
+    }
 }
 
 
@@ -50,7 +55,7 @@
 .imgcard{
     width: 100%;
     height: 100%;
-    border-radius: 20px;
+    // border-radius: 20px;
 }
 
 .hide{
