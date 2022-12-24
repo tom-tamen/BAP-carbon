@@ -22,7 +22,7 @@ for(let player=0; player<NbPlayers; player++){
     playerName.innerText = players[player] //pName
 
     let picture = document.createElement('img')
-    picture.src = "https://xsgames.co/randomusers/avatar.php?g=pixel"
+    picture.src = "https://xsgames.co/randomusers/avatar.php?g=pixel" + "&picture=" + player
     picture.alt = "image de profile"
     
 
@@ -87,6 +87,7 @@ document.querySelectorAll('.card').forEach(card=>{
             card.getElementsByTagName('img')[0].classList.add('hide')
             card.dataset.already = "false"
             card.getElementsByTagName('div')[0].classList.remove('hide')
+            card.classList.remove('hide-card')
 
             let OCID;
             exportCard[card.dataset.player].cards.forEach(obj=>{console.log(obj.cardObj)})
@@ -130,6 +131,7 @@ document.querySelector('.SC').addEventListener('click',()=>{
                 currentCard.getElementsByTagName('img')[0].src ="img/cards/png/"+fetchedCard.ID+'.png'
                 currentCard.dataset.already = "true"
                 currentCard.getElementsByTagName('div')[0].classList.add('hide')
+                currentCard.classList.add('hide-card')
     
                 exportCard[currentCard.dataset.player].cards.push({"CID": currentCard.dataset.id,"cardObj": fetchedCard})
             }else{
@@ -161,16 +163,32 @@ function getCurrent(list){
 
 
 document.querySelector(".chevron-previous").addEventListener("click",()=>{
-    let current = getCurrent(cpn)
+    let cpn = document.querySelectorAll(".cpn");
+    let current
+    cpn.forEach((player, index)=>{
+        if(player.classList.contains("content-visible")){
+            current=index
+        }
+    })
     cpn[current].classList.remove('content-visible')
-    cpn[current-1].classList.add('content-visible')
-
+    if(current-1<=-1){
+        cpn[cpn.length-1].classList.add('content-visible')
+    }else{
+        cpn[current-1].classList.add('content-visible')
+    }
 })
 document.querySelector(".chevron-next").addEventListener("click",()=>{
     let cpn = document.querySelectorAll(".cpn");
-    console.log(getCurrent(cpn))
-    // let current = getCurrent(cpn)
-    // console.log(current, cpn[current], cpn[current+1])
+    let current
+    cpn.forEach((player, index)=>{
+        if(player.classList.contains("content-visible")){
+            current=index
+        }
+    })
     cpn[current].classList.remove('content-visible')
-    cpn[current+1].classList.add('content-visible')
+    if(current+1>=cpn.length){
+        cpn[0].classList.add('content-visible')
+    }else{
+        cpn[current+1].classList.add('content-visible')
+    }
 })

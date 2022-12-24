@@ -32,13 +32,7 @@ scoreFinal.forEach((player,counter) =>{
     playerSubBox.classList.add('info-player')
     PlayerBox.appendChild(playerSubBox)
 
-    let name = document.createElement('p')
-    name.innerText = player.PlayerName
-    playerSubBox.appendChild(name)
 
-    let scorePlayer = document.createElement('p')
-    scorePlayer.innerText = "Score : "+player.score
-    playerSubBox.appendChild(scorePlayer)
 
     if(counter<=2){
         let picture = document.createElement('img')
@@ -47,7 +41,20 @@ scoreFinal.forEach((player,counter) =>{
         playerSubBox.appendChild(picture)
         document.querySelector(".podium").appendChild(PlayerBox)
         PlayerBox.classList.add('player-'+counter)
+
+        document.querySelector(".player-name-"+counter).innerText=player.PlayerName
+        document.querySelector(".score-"+counter).innerText+=player.score
     }else{
+
+        
+        let name = document.createElement('p')
+        name.innerText = player.PlayerName
+        playerSubBox.appendChild(name)
+
+        let scorePlayer = document.createElement('p')
+        scorePlayer.innerText = "Score : "+player.score
+        playerSubBox.appendChild(scorePlayer)
+
         document.querySelector(".autres-joueurs").appendChild(PlayerBox)
     }
 })

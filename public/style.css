@@ -342,6 +342,10 @@ footer {
   background-color: gray;
   opacity: 60%;
 }
+.card.hide-card {
+  background-color: transparent !important;
+  border: none !important;
+}
 
 .plus {
   display: block;
@@ -371,7 +375,6 @@ footer {
 .imgcard {
   width: 100%;
   height: 100%;
-  border-radius: 20px;
 }
 
 .hide {
@@ -601,6 +604,10 @@ footer {
   z-index: 22;
 }
 
+.hide {
+  display: none !important;
+}
+
 .bg-i {
   background-image: url(../../public/img/homepage/fond-à-pois.png);
 }
@@ -793,6 +800,15 @@ footer {
   color: #fff;
   font-family: "Koulen";
 }
+@media screen and (max-width: 700px) {
+  .div-game {
+    width: 90%;
+    margin: 10vh 5% 10vh 5%;
+    border: 4px solid #fff;
+    grid-template-columns: 1fr;
+    grid-template-rows: 90px 90px 1fr 1fr;
+  }
+}
 .div-game .div-tour {
   grid-column: 1/2;
   grid-row: 1/2;
@@ -801,10 +817,24 @@ footer {
   padding: 8px 12px 5px 12px;
   cursor: pointer;
 }
+@media screen and (max-width: 700px) {
+  .div-game .div-tour {
+    border: none;
+  }
+}
 .div-game .div-tour div {
   background-color: rgba(14, 34, 37, 0.7);
   height: 78px;
   opacity: 0.7;
+  border-bottom: none;
+  border-left: 4px solid #fff;
+  border-top: 4px solid #fff;
+  border-right: 4px solid #fff;
+}
+@media screen and (max-width: 700px) {
+  .div-game .div-tour div {
+    border: none;
+  }
 }
 .div-game .div-tour .tour {
   text-align: center;
@@ -824,11 +854,20 @@ footer {
   border-right: 4px solid #fff;
   font-size: 50px;
   text-align: center;
-  background-color: rgba(14, 34, 37, 0.7);
   cursor: pointer;
+}
+@media screen and (max-width: 700px) {
+  .div-game .titre-event {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    border: none;
+  }
 }
 .div-game .titre-event p {
   text-shadow: 0px 4.88px 4.88px rgba(0, 0, 0, 0.25);
+}
+.div-game .title-cat-event {
+  background-color: rgba(14, 34, 37, 0.7);
 }
 .div-game .event {
   grid-column: 1/2;
@@ -841,9 +880,22 @@ footer {
   padding-left: 10%;
   background-color: rgba(14, 34, 37, 0.7);
 }
-.div-game .event .eventDesc {
+@media screen and (max-width: 700px) {
+  .div-game .event {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    border: none;
+    padding: 15px;
+    text-align: center;
+  }
+}
+.div-game .event .eventDesc, .div-game .event .tourP {
   font-family: "Metrophobic";
   text-align: justify;
+}
+.div-game .event .tourP:nth-child(1) {
+  font-size: 1.69rem;
+  margin-bottom: 20px;
 }
 .div-game .event h2 {
   font-size: 30px;
@@ -859,6 +911,101 @@ footer {
   gap: 20px;
   padding-top: 20px;
   background-color: rgba(14, 34, 37, 0.7);
+}
+@media screen and (max-width: 700px) {
+  .div-game .visuel-cartes {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    border: none;
+    padding-top: 0px;
+  }
+}
+.div-game .visuel-cartes div:first-child {
+  display: flex;
+  justify-content: center;
+}
+.div-game .visuel-cartes img {
+  width: 85%;
+  height: auto;
+}
+@media screen and (max-width: 700px) {
+  .div-game .visuel-cartes .next {
+    margin-bottom: 45px;
+  }
+}
+
+.div-game-tour .div-tour {
+  border-bottom: none;
+  border-left: 4px solid #fff;
+  border-right: 4px solid #fff;
+  border-top: 4px solid #fff;
+  padding: 0;
+  background-color: rgba(14, 34, 37, 0.7);
+}
+@media screen and (max-width: 700px) {
+  .div-game-tour .div-tour {
+    border: none;
+  }
+}
+.div-game-tour .titre-event {
+  border: none;
+  border-bottom: 4px solid #ffffff;
+  padding: 8px 12px 5px 12px;
+}
+@media screen and (max-width: 700px) {
+  .div-game-tour .titre-event {
+    border: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .div-game-tour .titre-event .btn-event {
+    border: none;
+  }
+}
+.div-game-tour .titre-event div {
+  border-bottom: none;
+  border-left: 4px solid #fff;
+  border-right: 4px solid #fff;
+  border-top: 4px solid #fff;
+  height: 78px;
+  opacity: 0.7;
+  background-color: rgba(14, 34, 37, 0.7);
+}
+.div-game-tour .titre-event div:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+.div-game-tour .event {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  border-left: none;
+  border-right: 4px solid #fff;
+  padding-left: 0px;
+  padding-right: 10%;
+}
+@media screen and (max-width: 700px) {
+  .div-game-tour .event {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    border: none;
+    padding: 15px;
+  }
+}
+.div-game-tour .event .tourP {
+  text-align: center;
+}
+.div-game-tour .visuel-cartes {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  border-right: none;
+  border-left: 4px solid #fff;
+}
+@media screen and (max-width: 700px) {
+  .div-game-tour .visuel-cartes {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    border: none;
+  }
 }
 
 .next {

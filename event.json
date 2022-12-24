@@ -1,37 +1,37 @@
 [
     {
         "name": "Protocole de Kyoto",
-        "effect": "Tout le monde choisit une carte à défausser  et doit s'accorder avec les autres joueurs pour s'assurer que c'est bien leur carte la plus polluante. La main complète baisse d'une carte",
+        "effect": "Tout le monde choisit une carte à défausser  et doit s'accorder avec les autres joueurs pour s'assurer que c'est bien leur carte la plus polluante. La main complète baisse d'une carte.",
         "explanation": "Il s'agit d'un accord international et du premier accord de grande ampleur pour la réduction par les pays de l'OCDE de leur impact sur le réchauffement climatique et la diffusion de gaz à effet de serre. Il a été signé lors de la COP3 à Kyoto en 1997. Le protocole n'a pas été un franc succès, remis en cause par des gros pollueurs comme le Canada, jamais ratifié par les Etats-Unis, ne concernant pas tant que ça les nouveaux pollueurs de masse que sont devenus l'Inde et la Chine et ne prenant pas en compte la baisse de l'activité industrielle en ex-URSS, son bilan est estimé à une augmentation du CO2 dans l'atmosphère. Il a cependant allumé les consciences et les discussions sur la crise climatique.",
         "ID": 1
     },
     {
         "name": "Tempête Xynthia",
-        "effect": "Tous les joueurs piochent 3 cartes et les posent face découverte devant eux, après vote des autres joueurs, la carte la moins polluante de chaque joueur est défaussée. Les autres cartes sont mélangées et replacées en haut de la pioche",
+        "effect": "Tous les joueurs piochent 3 cartes et les posent face découverte devant eux, après vote des autres joueurs, la carte la moins polluante de chaque joueur est défaussée. Les autres cartes sont mélangées et replacées en haut de la pioche.",
         "explanation": "Dépression climatique survenue en Europe occidentale fin février 2010. La France a été le pays le plus touché, sa Côte atlantique ayant été frappé de plein fouet par la tempête. En tout, on compte 53 morts et près d'un million de foyers privés d'électricité.",
         "ID": 2
     },
     {
         "name": "Ouragan Katrina",
-        "effect": "Dès maintenant et jusqu'à ce que ne soit plus possible, tous les joueurs pioche dans la défausse. Leurs cartes défaussés tant que l'effet est actif vont dans un tas qui sera mélangé et replacé en haut de la pioche",
+        "effect": "Dès maintenant et jusqu'à ce que ne soit plus possible, tous les joueurs piochent dans la défausse. Leurs cartes défaussées tant que l'effet est actif vont dans un tas qui sera mélangé et replacé en haut de la pioche.",
         "explanation": "Un ouragan survenu en août 2005 qui a touché les Caraïbes, le Golfe du Mexique et les États Américains du Sud-Est. Aujourd'hui encore, il s'agit d'un des ouragans les plus puissants jamais enregistrés. Les dégâts matériels sont estimés à plus 108 milliards de dollars à l'époque et l'ouragan a coûté la vie à 1803 personnes et blessé de très nombreuses autres.  D'après les rapports du GIEC, le réchauffement climatique ne favorise pas l'apparition des cyclones et des tempêtes mais aurait tendance à les rendre bien plus violentes",
         "ID": 3
     },
     {
         "name": "Méga-feux de brousse australien",
-        "effect": "Tous les joueurs piochent une carte et la garde jusqu'à la fin de la partie, ils ne peuvent ni l'échanger ni la défausser et sera comptabilisé dans le score final",
+        "effect": "Tous les joueurs piochent une carte et la garde jusqu'à la fin de la partie, ils ne peuvent ni l'échanger ni la défausser et sera comptabilisée dans le score final.",
         "explanation": "Les incendies de végétation sont fréquents en Australie mais il y a rarement eu des épisodes aussi puissants que ceux qui sont survenus entre juin 2019 et mars 2020. 3 milliards d'animaux ont été touchés, 18, 6 milliards d'hectares sont partis en fumée. Le bilan humain est également lourd : 34 morts durant les feux et plus de 4500 autres des suites de détresse respiratoire après inhalation des fumées. La qualité de l'air dans la région a drastiquement baissé, les cendres ont contaminé les eaux de surfaces et la fumée des feux étaient si intense qu'elle était visible depuis le Chili, de l'autre côté de l'Océan Pacifique.",
         "ID": 4
     },
     {
         "name": "Gel des récoltes",
-        "effect": "Tous les joueurs pioche une carte, si ils ont une carte de catégorie Alimentation dans leur main, ils doivent la défausser et la remplacer par une autre de la défausse",
+        "effect": "Tous les joueurs piochent une carte, s'ils ont une carte de catégorie Alimentation dans leur main, ils doivent la défausser et la remplacer par une autre de la défausse.",
         "explanation": "Les épisodes de gel hivernaux en France arrive de plus en plus tard à cause du réchauffement climatique, condamnant les agriculteurs à la perte de leur récolte suivante et à la mort des bourgeons. La nuit du 3 au 4 avril 2022 a été la plus froide enregistré en France depuis 1947 et a causé de terribles dommages encore trop difficiles à chiffrer pour les agriculteurs.",
         "ID": 5
     },
     {
         "name": "Sécheresse intense",
-        "effect": "Tous les joueurs se défausse de leur carte la plus à gauche, ainsi que de ses cartes Eau en bouteille et Eau du robinet s'ils les ont. Ils piochent autant de cartes qu'il faut pour avoir une main complète.",
+        "effect": "Tous les joueurs se défaussent de leur carte la plus à gauche, ainsi que de ses cartes Eau en bouteille et Eau du robinet s'ils les ont. Ils piochent autant de cartes qu'il faut pour avoir une main complète.",
         "explanation": "La sécheresse désigne le temps pendant lequel aucune précipitation ne vient abreuver les sols, les cultures et les plantes, entraînant à court terme leur perte et à long terme une désertification. Le mois de mai 2022 a été le plus sec jamais enregistré par Météo France et toutes les régions de France métropolitaine en ont pâti, mais c'est le Sud-Est ravagé par des incendies depuis le 12 juin 2022 qui est le plus touché car les pluies ne viennent pas. Les risques d'incendies, de fortes chaleurs et les pertes pour les agricultures sont très élevés.",
         "ID": 6
     },
@@ -43,31 +43,31 @@
     },
     {
         "name": "Dégel du pergilisol",
-        "effect": "La main entière des joueurs est confinée. Les joueurs repiochent une main complète",
+        "effect": "La main entière des joueurs est confinée. Les joueurs repiochent une main complète.",
         "explanation": "Le pergélisol, parfois appelé par le terme anglais permafrost, désigne les étendues de sol gelé imperméable, pris dans la glace depuis des dizaines d'années. Leur dégel est utilisé comme un indicateur du réchauffement climatique. Les matières organiques prises dans la glace ainsi que les microbes enfermés ainsi pourrait augmenter encore plus la quantité de gaz à effet de serre et créer un risque sanitaire en nous confrontant à d'anciens agents pathogènes.",
         "ID": 8
     },
     {
         "name": "Canicule de 2003",
-        "effect": "Les cartes des joueurs sont révélés et les autres joueurs choisissent une carte à défausser",
+        "effect": "Les cartes des joueurs sont révélées et les autres joueurs choisissent une carte à défausser.",
         "explanation": "La canicule européenne de 2003 est un événement climatique d'ampleur exceptionnelle survenu de juin à août 2003 et marqué par de nombreux records de température au cours de la première quinzaine d'août. Cette canicule a suivi un printemps exceptionnellement chaud et sec où les températures atteignent à certains endroits déjà 30 °C fin avril. Cette canicule importante associée à une sécheresse record rappelle la vague de chaleur de l'été 1947 en Europe et la sécheresse de 1976. Dans certains pays, comme la France ou le Portugal, les conséquences sur les écosystèmes, la population, et les infrastructures sont importantes et provoquent une crise politique. Dans la plupart des stations météorologiques, le mercure a atteint ou dépassé 40 °C.",
         "ID": 9
     },
     {
         "name": "Tornade",
-        "effect": "Les joueurs mélangent leur main et les cartes sont redistribuées",
+        "effect": "Les joueurs mélangent leur main et les cartes sont redistribuées.",
         "explanation": "Les tornades désignent un phénomène météorologique qui nait des nuages d'orage et comporte des tourbillons de vents d'une violence extrême qui balaient tout sur leur passage",
         "ID": 10
     },
     {
         "name": "Pandémie de COVID-19",
-        "effect": "Les joueurs choisissent une carte qui est confinée. Elle comptera dans le calcul final",
+        "effect": "Les joueurs choisissent une carte qui est confinée. Elle comptera dans le calcul final.",
         "explanation": "La pandémie de COVID-19 a été une crise sanitaire de grande ampleur mais a eu le mérite de faire baisser la balance des émissions carbones de nos sociétés. La chute des émissions mondiales de CO2 en 2020, pour cause de pandémie et de violent recul de l'activité économique. Elles avaient progressé de 0,1 % en 2019 et n'avaient reculé que de 0,5 % en 2009, année de crise sévère. L'an dernier, les émissions des Etats-Unis ont plongé de 12 %, celles de l'Europe de 11 %, mais celles de la Chine de seulement 1,7 %.",
         "ID": 11
     },
     {
         "name": "Hausse du niveau de la mer",
-        "effect": "Tous les joueurs doivent piocher une carte de plus et leur main complète augmente d'une carte",
+        "effect": "Tous les joueurs doivent piocher une carte de plus et leur main complète augmente d'une carte.",
         "explanation": "L'élévation du niveau de la mer est un phénomène enclenché au cours du 20ème siècle et résultant du réchauffement climatique. Le niveau moyen des océans a augmenté de 20 cm entre 1901 et 2018, et le rythme s'accélère, s'établissant, vers 2020, à plus de 3,5 mm par an.",
         "ID": 12
     },
@@ -79,31 +79,31 @@
     },
     {
         "name": "Déforestation",
-        "effect": "Les joueurs piochent une carte dans la défausse et confinent leur carte la plus polluante après concertation",
+        "effect": "Les joueurs piochent une carte dans la défausse et confinent leur carte la plus polluante après concertation.",
         "explanation": "La déforestation est l'une des plus grandes causes d'appauvrissement de la biodiversité et empêche la séquestration du carbone par les arbres. Brûler un arbre c'est faire s'échapper le carbone accumulé. On estime que la moitié du couvert forestier terrestre a été détruit pendant le 20ème siècle, bien que l'activité de la déforestation existe depuis le Néolithique.",
         "ID": 14
     },
     {
         "name": "Agriculture biologique",
-        "effect": "Les joueurs peuvent se défausser d'une de leurs cartes confinées. S'il n'en ont pas, ils se défaussent d'une carte de leur choix",
+        "effect": "Les joueurs peuvent se défausser d'une de leurs cartes confinées. S'il n'en ont pas, ils se défaussent d'une carte de leur choix.",
         "explanation": "L'agriculture biologique est une méthode de production agricole qui vise à respecter les systèmes et cycles naturels, maintenir et améliorer l’état du sol, de l’eau et de l’air, la santé des végétaux et des animaux, ainsi que l’équilibre entre ceux-ci. ",
         "ID": 15
     },
     {
         "name": "Accord de Paris sur le climat",
-        "effect": "Tout le monde pioche 2 cartes puis choisit 2 cartes à défausser et doit s'accorder avec les autres joueurs pour s'assurer que c'est bien leur carte les plus polluante.",
+        "effect": "Tout le monde pioche 2 cartes puis choisit 2 cartes à défausser et doit s'accorder avec les autres joueurs pour s'assurer que c'est bien leur carte la plus polluante.",
         "explanation": "Il s'agit du premier traité universel visant à la protection de l'environnement, il a été voté à l'occasion de la COP21 à Paris, seuls quatres pays ne l'ont pas ratifié et les États-Unis ont ratifié l'accord et en font de nouveau parti depuis la présidence de Joe Biden.",
         "ID": 16
     },
     {
         "name": "Marée noire",
-        "effect": "Pendant ce tour, les cartes ayant un rapport avec le fioul dans les mains des joueurs doivent être confinées. Les joueurs ayant dû retirer des cartes piochent pour avoir une main complète",
+        "effect": "Pendant ce tour, les cartes ayant un rapport avec le fioul dans les mains des joueurs doivent être confinées. Les joueurs ayant dû retirer des cartes piochent pour avoir une main complète.",
         "explanation": "Le réchauffement climatique n'est pas une cause des marées noires, elle n'y est même pas liée mais sans notre dépendance aux carburants fossiles, eux très impactants, elles ne surviendraient pas. On parle de marée noire quand un navire pétrolier coule, sa cargaison, en règle générale du pétrole ou de l'essence se déverse dans la mer causant la mort de nombreuses espèces marines, sous-marines et d'oiseaux côtiers. La contamination d'un écosystème aux hydrocarbures peut avoir des impacts sur l'économie notamment la pêche et l'aquaculture ainsi que sur la santé humaine",
         "ID": 17
     },
     {
         "name": "Marée verte",
-        "effect": "Pendant ce tour, les cartes Alimentation dans les mains des joueurs doivent être confinées. Les joueurs ayant dû retirer des cartes piochent pour avoir une main complète",
+        "effect": "Pendant ce tour, les cartes Alimentation dans les mains des joueurs doivent être confinées. Les joueurs ayant dû retirer des cartes piochent pour avoir une main complète.",
         "explanation": "La prolifération d'une algue verte sur les côtes bretonnes a donné son nom au phénomène de marée verte. Ces algues échouées sur les plages pourissent au soleil en rejetant un gaz toxique en quelques minutes, le sulfure d'hydrogène. C'est l'agriculture industrielle qui avec les rejets d'éléments polluants nutritifs pour ces algues qui a pointé du doigt, la teneur des eaux bretonnes en nitrate est extrêmement élevée du fait de ces rejets. C'est un problème de santé publique majeure.",
         "ID": 18
     }
