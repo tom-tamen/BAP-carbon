@@ -70,8 +70,12 @@ header {
 .section-hp {
 
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 56px;
     z-index: 5;
     position: relative;
+    height: 83vh;
 
     .rules {
         width: 353px;
@@ -82,29 +86,32 @@ header {
         .container {
             display: flex;
             flex-direction: column;
-            padding: 24px;
+            padding: 16px;
 
             .h1-homepage {
-                font-size: 32px;
-                padding-bottom: 32px;
+                font-size: 40px;
+                font-weight: 400;
                 font-family: 'Koulen';
+                display: flex;
+                justify-content: center;
             }
 
-            .rules-text {
+            .rules-content {
                 display: flex;
                 flex-direction: column;
-                padding-bottom: 16px;
 
-                p {
+                .stages {
                     font-size: 28px;
-                    margin-right: 109px;
+                    font-weight: 400;
+                    font-family: 'Koulen';
                 }
 
                 div {
+                    display: flex;
 
                     p {
                         font-size: 22px;
-                        margin-right: 16px;
+                        margin-right: 32px;
                     }
     
                     img {
@@ -116,9 +123,9 @@ header {
 
             .slider {
                 display: flex;
-                justify-content: space-between;
+                justify-content: center;
                 gap: 10px;
-                padding-bottom: 10px;
+                margin-bottom: 16px;
 
                 .circle{
                     border-radius:50%;
@@ -138,6 +145,7 @@ header {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                margin: auto;
 
                 p {
                     color: white;
@@ -164,6 +172,14 @@ header {
             background: rgba(14, 34, 37, 0.6);
             border: 3px solid #FFFFFF;
             border-bottom: none;
+
+            h3 {
+                font-family: 'Koulen';
+                font-weight: 400;
+                font-size: 45px;
+                text-align: center;
+                color: white;
+            }
         }
         
         .deux {
@@ -172,6 +188,66 @@ header {
             border: 3px solid #FFFFFF;
             border-top: none;
             border-right: none;
+
+            .player-display {
+                height: 380px;
+                border: solid 2px rgba(0, 0, 0, 0.201);
+                border-radius: 5%;
+                margin: 16px;
+                padding-top: 16px;
+
+
+                .edit-player {
+                    display: flex;
+
+                    img {
+                        width: 84px;
+                        height: 85px;
+                        margin-left: 24px;
+                    }
+                    
+                    .player-inputs {
+                        margin-left: 24px;
+
+                        h3 {
+                            font-family: 'Koulen';
+                            font-weight: 400;
+                            font-size: 24px;
+                            color: white;
+                            text-align: center;
+                        }
+    
+                        #name {
+                            width: 180px;         
+                            background: rgba(255, 255, 255, 0.1);
+                            border: 3px solid #FFFFFF;
+                            border-radius: 10px;
+                            font-family: 'Koulen';
+                            font-weight: 200;
+                            font-size: 12px;
+                            color: white;
+                        }
+
+                        #name::placeholder {
+                            font-family: 'Koulen';
+                            font-weight: 400;
+                            font-size: 16px;
+                            color: rgba(255, 255, 255, 0.75);
+                            padding-left: 4px;
+                        }
+    
+                        #submit-player {
+                            width: 32px;
+                            height: 32px;
+                            background: #1EE18B;
+                            box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
+                            border-radius: 5px;
+                            color : white;
+                            border: none;
+                        }
+                    }
+                }
+            }
         }
 
         .trois {

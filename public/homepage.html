@@ -24,21 +24,20 @@
 
     <span class="titre-bg">CARBON</span>
     <span class="bg-pois"></span>
-
+    
     <section class="section-hp">
 
         <div class="rules">
             <div class="container">
                 <h1 class="h1-homepage">COMMENT JOUER</h1>
-                <div class="rules-text">
-                    <p>1. Premiere étape</p>
+                <div class="rules-content">
+                    <p class="stages">1. Premiere etape</p>
                     <div>
                         <p>Vous devez distribuer 4 cartes à tous les joueurs </p>
                         <img src="img/homepage/logo-cartes.png" alt="">
                     </div>
                 </div>
                 <div class="slider">
-                    <div class="circle"></div>
                     <div class="circle"></div>
                     <div class="circle"></div>
                     <div class="circle"></div>
@@ -56,17 +55,20 @@
                 <h3>CREE LA PARTIE</h2>
             </div>
             <div class="grid deux">
-                <div class="edit-player">
-                    <img id="" src="" alt="">
-                    <h3>Creer ton personnage</h3>
-                    <input id="name" type="text" name="name">
-                    <input type="submit" value="z" onclick="test()">
-                </div>
-                <h2>joueurs</h2>
-                <div id="player-list">
-                    <img src="" alt="">
-                    <span src="player-list-name"></span>
-                </div>
+                <div class="player-display">
+                    <div class="edit-player">
+                        <img id="" src="img/homepage/Avatar.png" alt="">
+                            <div class="player-inputs">
+                                <h3>Creer ton personnage</h3>
+                                <input id="name" type="text" name="name" placeholder="pseudo">
+                                <input id="submit-player" type="submit" value=">" onclick="test()">        
+                            </div>
+                    </div>
+                    <div id="player-list">
+                        <img src="" alt="">
+                        <span src="player-list-name"></span>
+                    </div>
+                </div>   
             </div>
             <div class="grid trois">
                 <h3>nombre de tours</h3>

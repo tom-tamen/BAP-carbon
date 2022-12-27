@@ -206,8 +206,12 @@ header a {
 
 .section-hp {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 56px;
   z-index: 5;
   position: relative;
+  height: 83vh;
 }
 .section-hp .rules {
   width: 353px;
@@ -218,35 +222,40 @@ header a {
 .section-hp .rules .container {
   display: flex;
   flex-direction: column;
-  padding: 24px;
+  padding: 16px;
 }
 .section-hp .rules .container .h1-homepage {
-  font-size: 32px;
-  padding-bottom: 32px;
+  font-size: 40px;
+  font-weight: 400;
   font-family: "Koulen";
+  display: flex;
+  justify-content: center;
 }
-.section-hp .rules .container .rules-text {
+.section-hp .rules .container .rules-content {
   display: flex;
   flex-direction: column;
-  padding-bottom: 16px;
 }
-.section-hp .rules .container .rules-text p {
+.section-hp .rules .container .rules-content .stages {
   font-size: 28px;
-  margin-right: 109px;
+  font-weight: 400;
+  font-family: "Koulen";
 }
-.section-hp .rules .container .rules-text div p {
+.section-hp .rules .container .rules-content div {
+  display: flex;
+}
+.section-hp .rules .container .rules-content div p {
   font-size: 22px;
-  margin-right: 16px;
+  margin-right: 32px;
 }
-.section-hp .rules .container .rules-text div img {
+.section-hp .rules .container .rules-content div img {
   width: 84px;
   height: 103px;
 }
 .section-hp .rules .container .slider {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 10px;
-  padding-bottom: 10px;
+  margin-bottom: 16px;
 }
 .section-hp .rules .container .slider .circle {
   border-radius: 50%;
@@ -264,6 +273,7 @@ header a {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: auto;
 }
 .section-hp .rules .container .btn p {
   color: white;
@@ -286,12 +296,70 @@ header a {
   border: 3px solid #FFFFFF;
   border-bottom: none;
 }
+.section-hp .setup .un h3 {
+  font-family: "Koulen";
+  font-weight: 400;
+  font-size: 45px;
+  text-align: center;
+  color: white;
+}
 .section-hp .setup .deux {
   grid-column: -3/-2;
   background: rgba(14, 34, 37, 0.6);
   border: 3px solid #FFFFFF;
   border-top: none;
   border-right: none;
+}
+.section-hp .setup .deux .player-display {
+  height: 380px;
+  border: solid 2px rgba(0, 0, 0, 0.201);
+  border-radius: 5%;
+  margin: 16px;
+  padding-top: 16px;
+}
+.section-hp .setup .deux .player-display .edit-player {
+  display: flex;
+}
+.section-hp .setup .deux .player-display .edit-player img {
+  width: 84px;
+  height: 85px;
+  margin-left: 24px;
+}
+.section-hp .setup .deux .player-display .edit-player .player-inputs {
+  margin-left: 24px;
+}
+.section-hp .setup .deux .player-display .edit-player .player-inputs h3 {
+  font-family: "Koulen";
+  font-weight: 400;
+  font-size: 24px;
+  color: white;
+  text-align: center;
+}
+.section-hp .setup .deux .player-display .edit-player .player-inputs #name {
+  width: 180px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 3px solid #FFFFFF;
+  border-radius: 10px;
+  font-family: "Koulen";
+  font-weight: 200;
+  font-size: 12px;
+  color: white;
+}
+.section-hp .setup .deux .player-display .edit-player .player-inputs #name::placeholder {
+  font-family: "Koulen";
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.75);
+  padding-left: 4px;
+}
+.section-hp .setup .deux .player-display .edit-player .player-inputs #submit-player {
+  width: 32px;
+  height: 32px;
+  background: #1EE18B;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  color: white;
+  border: none;
 }
 .section-hp .setup .trois {
   grid-column: 2/3;
