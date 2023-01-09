@@ -26,13 +26,15 @@ document.getElementById("submit-player").addEventListener('click', ()=>{
         img.src = mainAVT.src
         playerDiv.appendChild(img)
         playerDiv.appendChild(p)
-        let fname = PlayerName.value != '' ? PlayerName.value : 'Player '+playersCounter
+
+        let fname = PlayerName.value != '' && [...PlayerName.value].length <= 10 ? PlayerName.value : 'Player '+playersCounter
         p.innerHTML = fname
         playerList.appendChild(playerDiv)
+
+        players.push({'name': fname, 'pp': mainAVT.src})
+
         mainAVT.src = "https://xsgames.co/randomusers/assets/avatars/pixel/"+num+".jpg"
         PlayerName.value = ""
-        
-        players.push({'name': fname, 'pp': mainAVT.src})
 
     } else {
         console.log("2 many players")
