@@ -1,5 +1,5 @@
-let nbTours = 10
-let frequency = 0.5
+let nbTours = localStorage.getItem("nbTour")>0 ? localStorage.getItem("nbTour") : 10
+let frequency = localStorage.getItem("frequency")>0 ? localStorage.getItem("frequency") : 0.25
 let compteTours = 1
 
 let tourPrint = document.querySelectorAll('.tour')
@@ -32,7 +32,7 @@ function resetEvent(){
 
 document.querySelectorAll('.next').forEach(btn=>{
     btn.addEventListener('click', ()=>{
-        if(nbTours === compteTours){
+        if(nbTours == compteTours){
             //do things in localstorage
             window.location.href = "../select-cards.html";
         }else{

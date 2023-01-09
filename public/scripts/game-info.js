@@ -1,32 +1,44 @@
 window.reload = localStorage.clear()
 
+let playersCounter = 0
+let vu = []
+let num = Math.floor(Math.random() * 53)
+vu.push(num)
+let mainAVT = document.getElementById('avatar')
+mainAVT.src = "https://xsgames.co/randomusers/assets/avatars/pixel/"+num+".jpg"
+
 let players = []
 
-function test(){
-    if (players.length<8) {
-        let playerList = document.getElementById("player-list")
-        let a = document.getElementById('name').value
-        players.push(a)
-        while (playerList.firstChild) {
-        playerList.removeChild(playerList.firstChild)
-        localStorage.setItem('Players', players)
-        }
-        for (let i = 0; i < players.length; i++) {
-            let p = document.createElement("p")
-            let playerDiv = document.createElement('div')
-            let img = document.createElement("img")
-            playerDiv.setAttribute("id", "view-player")
-            img.src = "img/homepage/Avatar.png"
-            playerDiv.appendChild(img)
-            playerDiv.appendChild(p)
-            p.innerHTML=players[i]
-            playerList.appendChild(playerDiv)
-        }
+let playerList = document.getElementById("player-list")
+document.getElementById("submit-player").addEventListener('click', ()=>{
+    num = Math.floor(Math.random() * 53)
+    while(vu.includes(num)){
+        num = Math.floor(Math.random() * 53)
+    }
+    vu.push(num)
+    if (playersCounter<8) {
+        playersCounter++
+        let PlayerName = document.getElementById('name')
+        let p = document.createElement("p")
+        let playerDiv = document.createElement('div')
+        let img = document.createElement("img")
+        playerDiv.setAttribute("id", "view-player")
+        img.src = mainAVT.src
+        playerDiv.appendChild(img)
+        playerDiv.appendChild(p)
+        let fname = PlayerName.value != '' ? PlayerName.value : 'Player '+playersCounter
+        p.innerHTML = fname
+        playerList.appendChild(playerDiv)
+        mainAVT.src = "https://xsgames.co/randomusers/assets/avatars/pixel/"+num+".jpg"
+        PlayerName.value = ""
         
+        players.push({'name': fname, 'pp': mainAVT.src})
+
     } else {
         console.log("2 many players")
     }
-}
+})
+
 
 let lap = null
 let frequency = null
@@ -71,4 +83,10 @@ document.querySelectorAll('.frequency').forEach(e =>{
         localStorage.setItem('frequency', e.value)
         console.log(localStorage)
     })
+})
+
+
+document.querySelector('#submit-setup').addEventListener('click', ()=>{
+    localStorage.setItem('players', JSON.stringify(players))
+    window.location.href = 'jeu-en-cours.html'
 })

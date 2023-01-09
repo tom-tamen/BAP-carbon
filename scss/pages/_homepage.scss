@@ -67,6 +67,10 @@ header {
     }   
 }    
 
+#avatar{
+    border-radius: 100%;
+}
+
 .section-hp {
 
     display: flex;
@@ -208,6 +212,7 @@ header {
                         img {
                             width: 44px;
                             height: 45px;
+                            border-radius: 100%;
                         }
 
                         p {
@@ -266,6 +271,7 @@ header {
                             border-radius: 5px;
                             color : white;
                             border: none;
+                            cursor: pointer;
                         }
                     }
                 }
@@ -314,6 +320,7 @@ header {
                     border: 3px solid #FFFFFF;
                     border-radius: 10px;
                     gap: 100px;
+                    cursor: pointer;
                 }   
             }
 
@@ -334,6 +341,7 @@ header {
                     font-weight: 400;
                     font-size: 16px;
                     color: white;
+                    cursor: pointer;
                 }
                 
             }
@@ -350,6 +358,7 @@ header {
                 font-weight: 400;
                 font-size: 24px;
                 text-align: center;
+                cursor: pointer;
             }
         }
     }

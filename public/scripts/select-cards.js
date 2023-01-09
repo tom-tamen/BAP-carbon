@@ -1,4 +1,4 @@
-const players = ["Marcus", "Dave", "Karl","Mike","Luke","Kenny","Thomas"]
+const players = JSON.parse(localStorage.getItem('players'))
 const NbPlayers = players.length
 
 const cardPlayer = 4
@@ -19,10 +19,10 @@ for(let player=0; player<NbPlayers; player++){
 
     let allContent = document.createElement('div')
     let playerName = document.createElement('p')
-    playerName.innerText = players[player] //pName
+    playerName.innerText = players[player].name //pName
 
     let picture = document.createElement('img')
-    picture.src = "https://xsgames.co/randomusers/avatar.php?g=pixel" + "&picture=" + player
+    picture.src = players[player].pp
     picture.alt = "image de profile"
     
 

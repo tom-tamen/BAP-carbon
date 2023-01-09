@@ -204,6 +204,10 @@ header a {
   text-decoration: none;
 }
 
+#avatar {
+  border-radius: 100%;
+}
+
 .section-hp {
   display: flex;
   align-items: center;
@@ -319,6 +323,7 @@ header a {
 .section-hp .setup .two .player-display #player-list #view-player img {
   width: 44px;
   height: 45px;
+  border-radius: 100%;
 }
 .section-hp .setup .two .player-display #player-list #view-player p {
   font-size: 16px;
@@ -369,6 +374,7 @@ header a {
   border-radius: 5px;
   color: white;
   border: none;
+  cursor: pointer;
 }
 .section-hp .setup .three {
   grid-column: 2/3;
@@ -409,6 +415,7 @@ header a {
   border: 3px solid #FFFFFF;
   border-radius: 10px;
   gap: 100px;
+  cursor: pointer;
 }
 .section-hp .setup .three .event {
   display: flex;
@@ -427,6 +434,7 @@ header a {
   font-weight: 400;
   font-size: 16px;
   color: white;
+  cursor: pointer;
 }
 .section-hp .setup .three #submit-setup {
   width: 232px;
@@ -440,6 +448,7 @@ header a {
   font-weight: 400;
   font-size: 24px;
   text-align: center;
+  cursor: pointer;
 }
 
 footer {
