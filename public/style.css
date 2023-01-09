@@ -217,6 +217,11 @@ header a {
   position: relative;
   height: 83vh;
 }
+@media screen and (max-width: 770px) {
+  .section-hp {
+    display: block;
+  }
+}
 .section-hp .rules {
   width: 353px;
   height: 338px;
@@ -320,6 +325,11 @@ header a {
   gap: 32px;
   width: 80%;
 }
+.section-hp .setup .two .player-display #player-list #view-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .section-hp .setup .two .player-display #player-list #view-player img {
   width: 44px;
   height: 45px;
@@ -330,6 +340,7 @@ header a {
   font-weight: 400;
   font-family: "Metrophobic";
   color: white;
+  text-align: center;
 }
 .section-hp .setup .two .player-display .edit-player {
   display: flex;
@@ -354,10 +365,11 @@ header a {
   background: rgba(255, 255, 255, 0.1);
   border: 3px solid #FFFFFF;
   border-radius: 10px;
-  font-family: "Koulen";
+  font-family: "Metrophobic";
   font-weight: 200;
-  font-size: 12px;
+  font-size: 16px;
   color: white;
+  padding-left: 4px;
 }
 .section-hp .setup .two .player-display .edit-player .player-inputs #name::placeholder {
   font-family: "Koulen";
@@ -386,6 +398,12 @@ header a {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+@media screen and (max-width: 770px) {
+  .section-hp .setup .three {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
 }
 .section-hp .setup .three h3 {
   margin-top: 40px;

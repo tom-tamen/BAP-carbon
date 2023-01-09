@@ -13,7 +13,9 @@ body {
     background-size: cover;
     font-family: "Metrophobic";
     position: relative;
-    overflow-x: hidden;
+    overflow-x: hidden; 
+
+   
 }
 
 header {
@@ -80,6 +82,10 @@ header {
     z-index: 5;
     position: relative;
     height: 83vh;
+
+    @include mixins.breakpoint(770px) {
+        display: block;
+    }
 
     .rules {
         width: 353px;
@@ -164,6 +170,7 @@ header {
         width: 989px;
         height: 475px;
 
+
         .grid {
             width: 100%;
             height: 100%;
@@ -208,6 +215,9 @@ header {
                     width: 80%;
 
                     #view-player {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
 
                         img {
                             width: 44px;
@@ -220,6 +230,7 @@ header {
                             font-weight: 400;
                             font-family: 'Metrophobic';
                             color: white;
+                            text-align: center;
                         }
                     }
                 }
@@ -249,10 +260,11 @@ header {
                             background: rgba(255, 255, 255, 0.1);
                             border: 3px solid #FFFFFF;
                             border-radius: 10px;
-                            font-family: 'Koulen';
+                            font-family: 'Metrophobic';
                             font-weight: 200;
-                            font-size: 12px;
+                            font-size: 16px;
                             color: white;
+                            padding-left: 4px;
                         }
 
                         #name::placeholder {
@@ -289,6 +301,11 @@ header {
             display: flex;
             align-items: center;
             flex-direction: column;
+
+            @include mixins.breakpoint(770px) {
+                grid-column: 1 / 2;
+                grid-row: 3 / 4;
+            }
 
             h3 {
                 margin-top: 40px;

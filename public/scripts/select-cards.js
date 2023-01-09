@@ -39,7 +39,7 @@ for(let player=0; player<NbPlayers; player++){
     allContent.appendChild(playerInfos)
     allContent.appendChild(cardBox)
 
-    exportCard.push({"playerID" : player ,"PlayerName" : players[player], "picture": "https://xsgames.co/randomusers/avatar.php?g=pixel","cards" : []})
+    exportCard.push({"playerID" : player ,"PlayerName" : players[player].name, "picture": players[player].pp,"cards" : []})
 
     for(let cardI=0; cardI<cardPlayer; cardI++){
         let card=document.createElement('div')
