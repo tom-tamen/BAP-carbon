@@ -231,38 +231,29 @@ header a {
   display: flex;
   justify-content: center;
 }
-.section-hp .rules .container .rules-content {
+.section-hp .rules .container .swiper {
+  width: 308px;
+  height: 188px;
+}
+.section-hp .rules .container .swiper .swiper-wrapper .swiper-slide .rules-content {
   display: flex;
   flex-direction: column;
 }
-.section-hp .rules .container .rules-content .stages {
+.section-hp .rules .container .swiper .swiper-wrapper .swiper-slide .rules-content .stages {
   font-size: 28px;
   font-weight: 400;
   font-family: "Koulen";
 }
-.section-hp .rules .container .rules-content div {
+.section-hp .rules .container .swiper .swiper-wrapper .swiper-slide .rules-content div {
   display: flex;
 }
-.section-hp .rules .container .rules-content div p {
+.section-hp .rules .container .swiper .swiper-wrapper .swiper-slide .rules-content div p {
   font-size: 22px;
   margin-right: 32px;
 }
-.section-hp .rules .container .rules-content div img {
+.section-hp .rules .container .swiper .swiper-wrapper .swiper-slide .rules-content div img {
   width: 84px;
   height: 103px;
-}
-.section-hp .rules .container .slider {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 16px;
-}
-.section-hp .rules .container .slider .circle {
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
-  background: #0E2225;
-  opacity: 0.75;
 }
 .section-hp .rules .container .btn {
   width: 199px;
@@ -328,6 +319,12 @@ header a {
 .section-hp .setup .two .player-display #player-list #view-player img {
   width: 44px;
   height: 45px;
+}
+.section-hp .setup .two .player-display #player-list #view-player p {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Metrophobic";
+  color: white;
 }
 .section-hp .setup .two .player-display .edit-player {
   display: flex;

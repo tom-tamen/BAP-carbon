@@ -96,44 +96,43 @@ header {
                 justify-content: center;
             }
 
-            .rules-content {
-                display: flex;
-                flex-direction: column;
+            .swiper {
+                width: 308px;
+                height: 188px;
 
-                .stages {
-                    font-size: 28px;
-                    font-weight: 400;
-                    font-family: 'Koulen';
-                }
 
-                div {
-                    display: flex;
-
-                    p {
-                        font-size: 22px;
-                        margin-right: 32px;
+                .swiper-wrapper {
+                    
+                    .swiper-slide {
+                        
+                        .rules-content {
+                            display: flex;
+                            flex-direction: column;
+            
+                            .stages {
+                                font-size: 28px;
+                                font-weight: 400;
+                                font-family: 'Koulen';
+                            }
+            
+                            div {
+                                display: flex;
+            
+                                p {
+                                    font-size: 22px;
+                                    margin-right: 32px;
+                                }
+                
+                                img {
+                                    width: 84px;
+                                    height: 103px; 
+                                }
+                            }
+                        }
                     }
-    
-                    img {
-                        width: 84px;
-                        height: 103px; 
-                    }
                 }
-            }
 
-            .slider {
-                display: flex;
-                justify-content: center;
-                gap: 10px;
-                margin-bottom: 16px;
-
-                .circle{
-                    border-radius:50%;
-                    width:10px;
-                    height:10px;
-                    background: #0E2225;
-                    opacity: 0.75; 
-                }
+                
             }
 
             .btn {
@@ -209,6 +208,13 @@ header {
                         img {
                             width: 44px;
                             height: 45px;
+                        }
+
+                        p {
+                            font-size: 16px;
+                            font-weight: 400;
+                            font-family: 'Metrophobic';
+                            color: white;
                         }
                     }
                 }

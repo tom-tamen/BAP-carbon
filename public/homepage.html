@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
     <title>Accueil --- CARBON</title>
 
     
@@ -30,19 +32,63 @@
         <div class="rules">
             <div class="container">
                 <h1 class="h1-homepage">COMMENT JOUER</h1>
-                <div class="rules-content">
-                    <p class="stages">1. Premiere etape</p>
-                    <div>
-                        <p>Vous devez distribuer 4 cartes à tous les joueurs </p>
-                        <img src="img/homepage/logo-cartes.png" alt="">
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="rules-content">
+                                <p class="stages">I. Premiere etape</p>
+                                <div>
+                                    <p>Vous devez distribuer 4 cartes à tous les joueurs </p>
+                                    <img src="img/homepage/logo-cartes.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="rules-content">
+                                <p class="stages">II. Deuxieme etape</p>
+                                <div>
+                                    <p>Vous devez distribuer 4 cartes à tous les joueurs </p>
+                                    <img src="img/homepage/logo-cartes.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="rules-content">
+                                <p class="stages">III. Troisieme etape</p>
+                                <div>
+                                    <p>Vous devez distribuer 4 cartes à tous les joueurs </p>
+                                    <img src="img/homepage/logo-cartes.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="swiper-slide">
+                            <div class="rules-content">
+                                <p class="stages">IV. quatrieme etape</p>
+                                <div>
+                                    <p>Vous devez distribuer 4 cartes à tous les joueurs </p>
+                                    <img src="img/homepage/logo-cartes.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="rules-content">
+                                <p class="stages">V. Cinquieme etape</p>
+                                <div>
+                                    <p>Vous devez distribuer 4 cartes à tous les joueurs </p>
+                                    <img src="img/homepage/logo-cartes.png" alt="">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="slider">
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
                 </div>
                 <div class="btn">
                     <p>Voir tout</p>
@@ -101,5 +147,7 @@
     </footer>
     <script src="https://kit.fontawesome.com/42f94b7d2b.js" crossorigin="anonymous"></script>
     <script src="scripts/game-info.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="scripts/swiper.js"></script>
 </body>
 </html>
