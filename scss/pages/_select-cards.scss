@@ -129,6 +129,19 @@
             @include mixins.flexdef(true);
             width: 100%;
             gap: 6px;
+            position: relative;
+            .cache-clic{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 21;
+                display: none;
+                &.show-cache{
+                    display: block;
+                }
+            }
             .searchBar{
                 width: 80%;
                 height: 40px;
@@ -185,6 +198,13 @@
             border-radius: 5px;
             &:hover{
                 background-color: #4CC9FF;
+            }
+            &.disabled{
+                filter: grayscale(90%);
+                cursor:default;
+                &:hover{
+                    filter: grayscale(90%);
+                }
             }
         }
         .align-both{

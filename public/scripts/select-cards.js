@@ -6,6 +6,8 @@ let cardId = 0
 
 let exportCard = []
 
+const classementBTN = document.querySelector('.bouton-retour')
+
 //let pName = "{player name} :"
 
 for(let player=0; player<NbPlayers; player++){
@@ -99,19 +101,22 @@ document.querySelectorAll('.card').forEach(card=>{
                 }
             })
             // console.log("-------------------------------------------")
-            exportCard[card.dataset.player].cards.forEach(obj=>{console.log(obj.cardObj)})
+            //exportCard[card.dataset.player].cards.forEach(obj=>{console.log(obj.cardObj)})
             // console.log("+++++++++++++++++++++++++++++++++++++++++++")
             // console.log("cid : "+OCID+" index : "+checkAll.indexOf(OCID)+" list : "+checkAll)
             checkAll.splice(checkAll.indexOf(OCID), 1)
             // console.log("+++++++++++++++++++++++++++++++++++++++++++")
             // console.log("cid : "+OCID+" index : "+checkAll.indexOf(OCID)+" list : "+checkAll)
-            console.log(exportCard, checkAll)
+            //console.log(exportCard, checkAll)
 
         }else{
             document.querySelector(".SC").classList.remove('disabled')
             document.querySelector(".SC").disabled = false
             document.querySelectorAll('.card').forEach(card=>card.classList.add("cardOff"))
             document.querySelectorAll('.cache').forEach(box=>box.classList.add("show-cache"))
+            classementBTN.classList.add('disabled')
+            classementBTN.disabled = true
+            document.querySelector('.cache-clic').classList.add("show-cache")
         }
     })
 })
@@ -122,7 +127,7 @@ document.querySelector('.SC').addEventListener('click',()=>{
     document.querySelector('.searchBar').value = ""
     if(value>=1 && value<=54){
         fetchCard(value).then(fetchedCard => {
-            console.log(fetchedCard);
+            //console.log(fetchedCard);
             if(!checkAll.includes(fetchedCard.ID)){
                 
                 checkAll.push(fetchedCard.ID)
@@ -137,16 +142,20 @@ document.querySelector('.SC').addEventListener('click',()=>{
             }else{
                 console.log("non")
             }
-            console.log(exportCard, checkAll)
+            //console.log(exportCard, checkAll)
         });
     }
     document.querySelector(".SC").classList.add('disabled')
     document.querySelector(".SC").disabled = true
     document.querySelectorAll('.card').forEach(card=>card.classList.remove("cardOff"))
     document.querySelectorAll('.cache').forEach(box=>box.classList.remove("show-cache"))
+    classementBTN.classList.remove('disabled')
+    classementBTN.disabled = false
+    document.querySelector('.cache-clic').classList.remove("show-cache")
+
 })
 
-document.querySelector('.bouton-retour').addEventListener('click', ()=>{
+classementBTN.addEventListener('click', ()=>{
     localStorage.setItem('scoreFinal', JSON.stringify(exportCard))
     window.location.href = "../classement.html";
 })
