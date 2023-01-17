@@ -1,0 +1,21 @@
+@mixin breakpoint($width) {
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
+
+@mixin minWidth($width) {
+    @media screen and (min-width: $width) {
+        @content;
+    }
+}
+
+@mixin flexdef($isNotColumn:null, $gap:null){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @if($isNotColumn){
+        flex-direction: row;
+    }
+}

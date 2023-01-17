@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu --- CARBON</title>
+    <script src="https://kit.fontawesome.com/42f94b7d2b.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <a href="../"><img src="img/homepage/logo-carbon.png" alt="logo-carbon" class="logo-carbon"></a>
+        <div style="display: flex; align-items: center;">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="btn-articles">ARTICLES</a>
+        </div>
+    </header>
+
+    <span class="titre-bg">CARBON</span>
+    <!-- <span class="bg-pois"></span> -->
+
+    <div class="div-game div-game-tour">
+        <div class="div-tour">
+            <p class="tour">Tour x <span class="tour-print-span">/x</span></p>
+        </div>
+        <div class="titre-event">
+            <div class="btn-event">
+                <p>Evenement</p>
+            </div>
+        </div>
+        <div class="visuel-cartes">
+            <div><img src="./img/homepage/cartes.png" alt="visuel-cartes"></div>
+            <div class="next">Continuer</div>
+        </div>
+        <div class="event">
+            <p class="tourP">Chaque joueur procède au tirage d’une carte et en remet une dans le depôt.</p>
+            <p class="tourP">Vous pouvez ensuite débattre entre joueurs pour échanger vos cartes si vous le souhaitez.</p>
+        </div>
+    </div>
+
+    <div class="div-game div-game-event hide">
+        <div class="div-tour">
+            <div class="btn-tour">
+                <p class="tour">Tour x <span class="tour-print-span">/x</span></p>
+            </div>
+        </div>
+        <div class="titre-event title-cat-event">
+            <p>Evenement</p>
+        </div>
+        <div class="visuel-cartes">
+            <div><img src="./img/homepage/cartes.png" alt="visuel-cartes"></div>
+            <div class="next">Continuer</div>
+        </div>
+        <div class="event">
+            <h2 class="eventName">Pas d'evenement</h2>
+            <p class="eventDesc">Vous pouvez continuer la partie</p>
+        </div>
+    </div>
+
+    <script src="scripts/game.js"></script>
+</body>
+</html>

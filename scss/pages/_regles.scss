@@ -1,0 +1,131 @@
+@use "mixins";
+
+.section-regles {
+    background: rgba(14, 34, 37, 0.7);
+    margin: 70px;
+    color: #fff;
+    border: 5px solid #fff;
+
+    position: relative;
+    z-index: 4;
+}
+
+.h1-regles {
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Koulen';
+}
+
+.div-regles {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    padding: 30px 0px 50px 0px;
+
+    @include mixins.breakpoint(850px) {
+        flex-direction: column;
+        margin-top: 0px;
+    }
+}
+
+.boutons-regles {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include mixins.breakpoint(850px) {
+        display: none;
+    }
+}
+
+#boutons-regles-mobile {
+    background-color: #0E2225;
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    padding: 0.5rem;
+    margin-left: 10%;
+
+}
+.div-boutons-regles-mobile {
+    display: none;
+
+    @include mixins.breakpoint(850px) {
+        display: block;
+    }
+}
+
+.section-regles-droite {
+    width: 50%;
+    display: none;
+
+    @include mixins.breakpoint(850px) {
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 5%;
+    }
+}
+
+.section-regles-droite p {
+    text-align: justify;
+    margin-top: 16px;
+}
+
+.h2-regles {
+    color: #fff;
+    font-family: 'Koulen';
+}
+
+.btn-rules {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(30, 225, 139);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    @include mixins.breakpoint(850px) {
+        background-color: #0E2225;
+    }
+}
+
+.btn-rules:hover {
+    cursor: pointer;
+    // background-color: #87EFC1;
+    // color: #0E2225;
+}
+
+.btn-acc {
+    margin-top: 30px;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(30, 225, 139);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.btn-acc a {
+    color: #fff;
+}
+
+.active {
+    display: block;
+}
+
+
+.titre-bg {
+    background: linear-gradient(135deg, #1EE18B 0%, #4cc9ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 36vw;
+    font-family: "Koulen";
+    position: absolute;
+    line-height: 0.6;
+    z-index: 1;
+    text-align: center;
+    left: 0;
+    right: 0;
+}

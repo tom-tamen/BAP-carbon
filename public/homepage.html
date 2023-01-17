@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+    <title>Accueil --- CARBON</title>
+
+    
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+
+    <link rel="stylesheet" href="public/style.css">
+</head>
+<body>
+
+    <header>
+        <a href="../public/homepage.html"><img src="img/homepage/logo-carbon.png" alt="logo-carbon" class="logo-carbon"></a>
+        <div style="display: flex; align-items: center;">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="btn-articles">ARTICLES</a>
+        </div>
+    </header>
+
+    <span class="titre-bg">CARBON</span>
+    <span class="bg-pois"></span>
+    
+    <section class="section-hp">
+
+        <div class="rules">
+            <div class="container">
+                <h1 class="h1-homepage">COMMENT JOUER</h1>
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="rules-content">
+                                <p class="stages">I. Premiere etape</p>
+                                <div>
+                                    <p>Vous devez distribuer 4 cartes à tous les joueurs </p>
+                                    <img src="img/homepage/logo-cartes.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="rules-content">
+                                <p class="stages">II. Deuxieme etape</p>
+                                <div>
+                                    <p>Vous devez distribuer 4 cartes à tous les joueurs </p>
+                                    <img src="img/homepage/logo-cartes.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="rules-content">
+                                <p class="stages">III. Troisieme etape</p>
+                                <div>
+                                    <p>Vous devez distribuer 4 cartes à tous les joueurs </p>
+                                    <img src="img/homepage/logo-cartes.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="swiper-slide">
+                            <div class="rules-content">
+                                <p class="stages">IV. quatrieme etape</p>
+                                <div>
+                                    <p>Vous devez distribuer 4 cartes à tous les joueurs </p>
+                                    <img src="img/homepage/logo-cartes.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="rules-content">
+                                <p class="stages">V. Cinquieme etape</p>
+                                <div>
+                                    <p>Vous devez distribuer 4 cartes à tous les joueurs </p>
+                                    <img src="img/homepage/logo-cartes.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="btn">
+                    <p>Voir tout</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="setup">
+            <div class="grid one">
+                <h3>CREE LA PARTIE</h2>
+            </div>
+            <div class="grid two">
+                <div class="player-display">
+                    <div class="edit-player">
+                    <img id="" src="img/homepage/Avatar.png" alt="">
+                            <div class="player-inputs">
+                                <h3>Creer ton personnage</h3>
+                                <input id="name" type="text" name="name" placeholder="pseudo">
+                                <input id="submit-player" type="submit" value=">" onclick="test()">        
+                            </div>
+                    </div>
+                    <div id="player-list">
+                        <img src="" alt="">
+                        <span src="player-list-name"></span>
+                    </div>
+                </div>   
+            </div>
+            <div class="grid three">
+                <h3>nombre de tours</h3>
+                <div class="laps">
+                    <input class="lap-btn" type="button" name="10" value="10">
+                    <input class="lap-btn" type="button" name="15" value="15">
+                    <input class="lap-btn" type="button" name="25" value="25">
+                    <input class="lap-btn" type="button" name="30" value="30">
+                    <input class="lap-btn" type="button" name="35" value="35" >
+                    <input class="lap-btn" type="text" id="client-value">
+                </div>
+                <h3>Frequences des evenements</h3>
+                <p>par rapports au nombre de tours</p>
+                <div class="event">
+                    <button class="frequency" name="25%" value="0,25">25%</button>
+                    <button class="frequency" name="50%" value="0.50">50%</button>
+                    <button class="frequency" name="75%" value="0.75">75%</button>
+                    <button class="frequency" name="100%" value="1">100%</button>
+                </div>
+                <input id="submit-setup" type="submit" value="Lancer la partie" />
+            </div>
+        </div>
+        
+    </section>
+
+    <footer>
+    
+        <p class="copyright">Copyright © 2022 IIM Digital School - Axe Coding & Digital Innovation</p>
+
+    </footer>
+    <script src="https://kit.fontawesome.com/42f94b7d2b.js" crossorigin="anonymous"></script>
+    <script src="scripts/game-info.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="scripts/swiper.js"></script>
+</body>
+</html>
